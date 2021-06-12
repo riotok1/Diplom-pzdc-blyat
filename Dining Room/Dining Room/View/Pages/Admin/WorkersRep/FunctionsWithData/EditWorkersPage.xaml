@@ -1,0 +1,83 @@
+﻿<Page x:Class="Dining_Room.View.Pages.Admin.WorkersRep.FunctionsWithData.EditWorkersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Dining_Room.View.Pages.Admin.WorkersRep.FunctionsWithData"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1000"
+      Title="EditWorkersPage">
+
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.2*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal"
+                            Margin="0,0,0,20">
+                        <TextBlock Text="Фамилия:"
+                               FontSize="15"
+                               Width="170"/>
+                        <TextBox x:Name="surnameTxb"
+                             FontSize="15"
+                             Width="200"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                            Margin="0,0,0,20">
+                        <TextBlock Text="Имя:"
+                               FontSize="15"
+                               Width="170"/>
+                        <TextBox x:Name="nameTxb"
+                             FontSize="15"
+                             Width="200"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                            Margin="0,0,0,20">
+                        <TextBlock Text="Отчество:"
+                               FontSize="15"
+                               Width="170"/>
+                        <TextBox x:Name="patronymicTxb"
+                             FontSize="15"
+                             Width="200"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Должность:"
+                               FontSize="15"
+                               Width="170"/>
+                        <TextBox x:Name="usStaff"
+                             FontSize="15"
+                             Width="200"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal">
+                    <Button x:Name="backBtn"
+                        Content="Назад"
+                        Background="Black"
+                        BorderBrush="Black"
+                        Foreground="White"
+                        Width="120"
+                        Height="35"
+                        Margin="0,0,20,0" Click="backBtn_Click"/>
+                    <Button x:Name="editBtn"
+                        Content="Изменить"
+                        Background="Black"
+                        BorderBrush="Black"
+                        Foreground="White"
+                        Width="120"
+                        Height="35" Click="editBtn_Click"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

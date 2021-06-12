@@ -1,0 +1,189 @@
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\bin\Debug\EntityFramework.xml
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\bin\Debug\Dining Room.exe.config
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\bin\Debug\Dining Room.exe
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\bin\Debug\Dining Room.pdb
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\bin\Debug\EntityFramework.dll
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\bin\Debug\MaterialDesignColors.dll
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\AdminMainPage.g.cs
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\DishesMainPage.g.cs
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\FunctionsWithData\AddPage.g.cs
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\FunctionsWithData\EditPage.g.cs
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\FunctionsWithData\AddProductPage.g.cs
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\FunctionsWithData\EditProductsPage.g.cs
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\FunctionsWithData\SupplyInfoViewPage.g.cs
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\ProductsMainPage.g.cs
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\AddPostsPage.g.cs
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\AddWorkersPage.g.cs
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\EditPostsPage.g.cs
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\EditWorkersPage.g.cs
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\GetAJobPage.g.cs
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\PostsMainPage.g.cs
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\StaffMainPage.g.cs
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\StaffViewPage.g.cs
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\WorkersMainPage.g.cs
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\AutorizationPage.g.cs
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\User\UserMainPage.g.cs
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Windows\MainWindow.g.cs
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\App.g.cs
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room_Content.g.cs
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room_MarkupCompile.cache
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room_MarkupCompile.lref
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\App.baml
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\AdminMainPage.baml
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\DishesMainPage.baml
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\FunctionsWithData\AddPage.baml
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\FunctionsWithData\EditPage.baml
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\FunctionsWithData\AddProductPage.baml
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\FunctionsWithData\EditProductsPage.baml
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\FunctionsWithData\SupplyInfoViewPage.baml
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\ProductsMainPage.baml
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\AddPostsPage.baml
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\AddWorkersPage.baml
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\EditPostsPage.baml
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\EditWorkersPage.baml
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\GetAJobPage.baml
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\PostsMainPage.baml
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\StaffMainPage.baml
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\StaffViewPage.baml
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\WorkersMainPage.baml
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\AutorizationPage.baml
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\User\UserMainPage.baml
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Windows\MainWindow.baml
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.g.resources
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\Dining_Room.Properties.Resources.resources
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.csproj.GenerateResource.cache
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.csproj.CoreCompileInputs.cache
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.csproj.CopyComplete
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.exe
+C:\Users\Пользователь\Desktop\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.pdb
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\AdminMainPage.g.cs
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\DishesMainPage.g.cs
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\FunctionsWithData\AddPage.g.cs
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\FunctionsWithData\EditPage.g.cs
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\FunctionsWithData\AddProductPage.g.cs
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\FunctionsWithData\EditProductsPage.g.cs
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\FunctionsWithData\SupplyInfoViewPage.g.cs
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\ProductsMainPage.g.cs
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\AddPostsPage.g.cs
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\AddWorkersPage.g.cs
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\EditPostsPage.g.cs
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\EditWorkersPage.g.cs
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\GetAJobPage.g.cs
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\PostsMainPage.g.cs
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\StaffMainPage.g.cs
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\StaffViewPage.g.cs
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\WorkersMainPage.g.cs
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\AutorizationPage.g.cs
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\User\UserMainPage.g.cs
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Windows\MainWindow.g.cs
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\App.g.cs
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room_Content.g.cs
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room_MarkupCompile.cache
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room_MarkupCompile.lref
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\bin\Debug\Dining Room.exe.config
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\bin\Debug\Dining Room.exe
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\bin\Debug\Dining Room.pdb
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\bin\Debug\EntityFramework.dll
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\bin\Debug\EntityFramework.SqlServer.dll
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\bin\Debug\MaterialDesignColors.dll
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\bin\Debug\EntityFramework.xml
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\bin\Debug\EntityFramework.SqlServer.xml
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\bin\Debug\MaterialDesignColors.pdb
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\bin\Debug\ru\EntityFramework.resources.dll
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\App.baml
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\AdminMainPage.baml
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\DishesMainPage.baml
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\FunctionsWithData\AddPage.baml
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\FunctionsWithData\EditPage.baml
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\FunctionsWithData\AddProductPage.baml
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\FunctionsWithData\EditProductsPage.baml
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\FunctionsWithData\SupplyInfoViewPage.baml
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\ProductsMainPage.baml
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\AddPostsPage.baml
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\AddWorkersPage.baml
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\EditPostsPage.baml
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\EditWorkersPage.baml
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\GetAJobPage.baml
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\PostsMainPage.baml
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\StaffMainPage.baml
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\StaffViewPage.baml
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\WorkersMainPage.baml
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\AutorizationPage.baml
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\User\UserMainPage.baml
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\View\Windows\MainWindow.baml
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.g.resources
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\Dining_Room.Properties.Resources.resources
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.csproj.GenerateResource.cache
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.csproj.CoreCompileInputs.cache
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.csproj.CopyComplete
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.exe
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.pdb
+D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.csprojAssemblyReference.cache
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\AdminMainPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\DishesMainPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\FunctionsWithData\AddPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\FunctionsWithData\EditPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\DeliveryMainPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\FunctionsWithData\AddProductPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\Market\MarketAddPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\Market\MarketEditPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\Market\MarketMainPAge.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\ProductSystemPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\AddWorkersPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\EditWorkersPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\StaffMainPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\AutorizationPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\User\UserMainPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Windows\MainWindow.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\App.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room_Content.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room_MarkupCompile.cache
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room_MarkupCompile.lref
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\bin\Debug\Dining Room.exe.config
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\bin\Debug\Dining Room.exe
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\bin\Debug\Dining Room.pdb
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\bin\Debug\EntityFramework.dll
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\bin\Debug\MaterialDesignColors.dll
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\bin\Debug\EntityFramework.xml
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\App.baml
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\AdminMainPage.baml
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\DishesMainPage.baml
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\FunctionsWithData\AddPage.baml
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\FunctionsWithData\EditPage.baml
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\DeliveryMainPage.baml
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\FunctionsWithData\AddProductPage.baml
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\Market\MarketAddPage.baml
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\Market\MarketEditPage.baml
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\Market\MarketMainPAge.baml
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\ProductSystemPage.baml
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\AddWorkersPage.baml
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\EditWorkersPage.baml
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\StaffMainPage.baml
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\AutorizationPage.baml
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\User\UserMainPage.baml
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Windows\MainWindow.baml
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.g.resources
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining_Room.Properties.Resources.resources
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.csproj.GenerateResource.cache
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.csproj.CoreCompileInputs.cache
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.csproj.CopyComplete
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.exe
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.pdb
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.csprojAssemblyReference.cache

@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ManagerDiningRoomModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Basket">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="WorkersID" Type="Int32" Nullable="false" />
+    <Property Name="YesterdayDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Count" Type="Int32" Nullable="false" />
+    <Property Name="TotalSum" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Basket_Products" FromRole="Basket" ToRole="Products" />
+    <NavigationProperty Name="Workers" Relationship="Self.FK_Basket_Workers" FromRole="Basket" ToRole="Workers" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Dish" Relationship="Self.FK_Dish_CategoryID_Category_ID" FromRole="Category" ToRole="Dish" />
+  </EntityType>
+  <EntityType Name="Dish">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DishImg" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="NameOfDish" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CategoryID" Type="Int32" Nullable="false" />
+    <Property Name="Volume" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Count" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Category" Relationship="Self.FK_Dish_CategoryID_Category_ID" FromRole="Dish" ToRole="Category" />
+    <NavigationProperty Name="YesterdayMenu" Relationship="Self.FK_YesterdayMenu_Dish" FromRole="Dish" ToRole="YesterdayMenu" />
+  </EntityType>
+  <EntityType Name="Manager">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Surname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SignID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="SignIn" Relationship="Self.FK_Manager_SignID_SignIn_ID" FromRole="Manager" ToRole="SignIn" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductImage" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="ProductName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Price" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Basket" Relationship="Self.FK_Basket_Products" FromRole="Products" ToRole="Basket" />
+    <NavigationProperty Name="Supply" Relationship="Self.FK_Supply_Products" FromRole="Products" ToRole="Supply" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="IDRole" />
+    </Key>
+    <Property Name="IDRole" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="SignIn" Relationship="Self.FK_SignIn_RoleID_Role_IDRole" FromRole="Role" ToRole="SignIn" />
+  </EntityType>
+  <EntityType Name="SignIn">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LogIn" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RoleID" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Manager" Relationship="Self.FK_Manager_SignID_SignIn_ID" FromRole="SignIn" ToRole="Manager" />
+    <NavigationProperty Name="Role" Relationship="Self.FK_SignIn_RoleID_Role_IDRole" FromRole="SignIn" ToRole="Role" />
+  </EntityType>
+  <EntityType Name="Supply">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="WorkersID" Type="Int32" Nullable="false" />
+    <Property Name="YesterdayDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Count" Type="Int32" Nullable="false" />
+    <Property Name="TotalSum" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Supply_Products" FromRole="Supply" ToRole="Products" />
+    <NavigationProperty Name="Workers" Relationship="Self.FK_Supply_Workers" FromRole="Supply" ToRole="Workers" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Workers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Surname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Patronymic" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Post" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Basket" Relationship="Self.FK_Basket_Workers" FromRole="Workers" ToRole="Basket" />
+    <NavigationProperty Name="Supply" Relationship="Self.FK_Supply_Workers" FromRole="Workers" ToRole="Supply" />
+    <NavigationProperty Name="YesterdayMenu" Relationship="Self.FK_YesterdayMenu_Workers" FromRole="Workers" ToRole="YesterdayMenu" />
+  </EntityType>
+  <EntityType Name="YesterdayMenu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DishID" Type="Int32" Nullable="false" />
+    <Property Name="CookID" Type="Int32" Nullable="false" />
+    <Property Name="YesterdayDate" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Dish" Relationship="Self.FK_YesterdayMenu_Dish" FromRole="YesterdayMenu" ToRole="Dish" />
+    <NavigationProperty Name="Workers" Relationship="Self.FK_YesterdayMenu_Workers" FromRole="YesterdayMenu" ToRole="Workers" />
+  </EntityType>
+  <Association Name="FK_Basket_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Basket" Type="Self.Basket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Basket">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Basket_Workers">
+    <End Role="Workers" Type="Self.Workers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Basket" Type="Self.Basket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Workers">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Basket">
+        <PropertyRef Name="WorkersID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Dish_CategoryID_Category_ID">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="Dish" Type="Self.Dish" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Dish">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_YesterdayMenu_Dish">
+    <End Role="Dish" Type="Self.Dish" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="YesterdayMenu" Type="Self.YesterdayMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dish">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="YesterdayMenu">
+        <PropertyRef Name="DishID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Manager_SignID_SignIn_ID">
+    <End Role="SignIn" Type="Self.SignIn" Multiplicity="1" />
+    <End Role="Manager" Type="Self.Manager" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SignIn">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Manager">
+        <PropertyRef Name="SignID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Supply_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Supply" Type="Self.Supply" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Supply">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SignIn_RoleID_Role_IDRole">
+    <End Role="Role" Type="Self.Role" Multiplicity="1" />
+    <End Role="SignIn" Type="Self.SignIn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="IDRole" />
+      </Principal>
+      <Dependent Role="SignIn">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Supply_Workers">
+    <End Role="Workers" Type="Self.Workers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Supply" Type="Self.Supply" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Workers">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Supply">
+        <PropertyRef Name="WorkersID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_YesterdayMenu_Workers">
+    <End Role="Workers" Type="Self.Workers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="YesterdayMenu" Type="Self.YesterdayMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Workers">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="YesterdayMenu">
+        <PropertyRef Name="CookID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ManagerDiningRoomEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Basket" EntityType="Self.Basket" />
+    <EntitySet Name="Category" EntityType="Self.Category" />
+    <EntitySet Name="Dish" EntityType="Self.Dish" />
+    <EntitySet Name="Manager" EntityType="Self.Manager" />
+    <EntitySet Name="Products" EntityType="Self.Products" />
+    <EntitySet Name="Role" EntityType="Self.Role" />
+    <EntitySet Name="SignIn" EntityType="Self.SignIn" />
+    <EntitySet Name="Supply" EntityType="Self.Supply" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Workers" EntityType="Self.Workers" />
+    <EntitySet Name="YesterdayMenu" EntityType="Self.YesterdayMenu" />
+    <AssociationSet Name="FK_Basket_Products" Association="Self.FK_Basket_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Basket" EntitySet="Basket" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Basket_Workers" Association="Self.FK_Basket_Workers">
+      <End Role="Workers" EntitySet="Workers" />
+      <End Role="Basket" EntitySet="Basket" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Dish_CategoryID_Category_ID" Association="Self.FK_Dish_CategoryID_Category_ID">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Dish" EntitySet="Dish" />
+    </AssociationSet>
+    <AssociationSet Name="FK_YesterdayMenu_Dish" Association="Self.FK_YesterdayMenu_Dish">
+      <End Role="Dish" EntitySet="Dish" />
+      <End Role="YesterdayMenu" EntitySet="YesterdayMenu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Manager_SignID_SignIn_ID" Association="Self.FK_Manager_SignID_SignIn_ID">
+      <End Role="SignIn" EntitySet="SignIn" />
+      <End Role="Manager" EntitySet="Manager" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Supply_Products" Association="Self.FK_Supply_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Supply" EntitySet="Supply" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SignIn_RoleID_Role_IDRole" Association="Self.FK_SignIn_RoleID_Role_IDRole">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="SignIn" EntitySet="SignIn" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Supply_Workers" Association="Self.FK_Supply_Workers">
+      <End Role="Workers" EntitySet="Workers" />
+      <End Role="Supply" EntitySet="Supply" />
+    </AssociationSet>
+    <AssociationSet Name="FK_YesterdayMenu_Workers" Association="Self.FK_YesterdayMenu_Workers">
+      <End Role="Workers" EntitySet="Workers" />
+      <End Role="YesterdayMenu" EntitySet="YesterdayMenu" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

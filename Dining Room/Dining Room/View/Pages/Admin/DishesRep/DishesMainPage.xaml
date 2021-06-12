@@ -1,0 +1,141 @@
+﻿<Page x:Class="Dining_Room.View.Pages.Admin.DishesRep.DishesMainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Dining_Room.View.Pages.Admin.DishesRep"
+      mc:Ignorable="d" Loaded="Page_Loaded"
+      d:DesignHeight="600" d:DesignWidth="1000"
+      Title="DishesMainPage">
+
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.2*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <StackPanel VerticalAlignment="Center"
+                            HorizontalAlignment="Left"
+                            Orientation="Horizontal"
+                            Margin="20">
+                    <TextBlock Text="Выбрать по категории:"
+                               FontSize="15"
+                               Width="170"/>
+                    <ComboBox x:Name="dishCategoryCmb"
+                              SelectionChanged="dishCategoryCmb_SelectionChanged"
+                              FontSize="14"
+                              Width="140">
+                        <ComboBoxItem Content="Горячее"/>
+                        <ComboBoxItem Content="Холодное"/>
+                        <ComboBoxItem Content="Все"/>
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Orientation="Horizontal">
+                    <TextBlock Text="Поиск:"
+                               FontSize="15"
+                               Width="60"/>
+                    <TextBox x:Name="searchTxb"
+                             FontSize="15"
+                             Width="200" TextChanged="searchTxb_TextChanged"/>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Center"
+                            HorizontalAlignment="Right"
+                            Margin="20">
+                    <TextBlock x:Name="countDishes"
+                               FontSize="15"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <ListView x:Name="listDataView">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid Grid.Column="0"
+                                      Margin="0,0,20,0">
+                                    <Image Source="{Binding DishImg}"
+                                           Width="200"
+                                           Height="200"/>
+                                </Grid>
+
+                                <Grid Grid.Column="1">
+                                    <StackPanel VerticalAlignment="Center"
+                                                HorizontalAlignment="Center"
+                                                Orientation="Vertical">
+                                        <Label Content="{Binding NameOfDish}" ContentStringFormat="Блюдо: {0}" FontSize="14" FontWeight="Bold"/>
+                                        <Label Content="{Binding Category.Title}" ContentStringFormat="Категория: {0}" FontSize="14"/>
+                                        <Label Content="{Binding Volume}" ContentStringFormat="Объем: {0}" FontSize="14"/>
+                                        <Label Content="{Binding Price}" ContentStringFormat="Стоимость: {0} руб." FontSize="14"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <StackPanel VerticalAlignment="Center"
+                            HorizontalAlignment="Left"
+                            Margin="20">
+                    <Button x:Name="backBtn"
+                            Content="Назад"
+                            Background="Black"
+                            BorderBrush="Black"
+                            Foreground="White"
+                            Width="120"
+                            Height="35" 
+                            Click="backBtn_Click"/>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Orientation="Horizontal">
+                    <Button x:Name="addBtn"
+                            Content="Добавить"
+                            Background="Black"
+                            BorderBrush="Black"
+                            Foreground="White"
+                            Width="120"
+                            Height="35"
+                            Margin="0,0,20,0" Click="addBtn_Click"/>
+                    <Button x:Name="editBtn"
+                            Content="Изменить"
+                            Background="Black"
+                            BorderBrush="Black"
+                            Foreground="White"
+                            Width="120"
+                            Height="35"
+                            Margin="0,0,20,0" Click="editBtn_Click"/>
+                    <Button x:Name="removeBtn"
+                            Content="Удалить"
+                            Background="Black"
+                            BorderBrush="Black"
+                            Foreground="White"
+                            Width="120"
+                            Height="35" Click="removeBtn_Click"/>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Center"
+                            HorizontalAlignment="Right"
+                            Margin="20">
+                    <Button x:Name="wordBtn"
+                            Content="WORD"
+                            Background="Black"
+                            BorderBrush="Black"
+                            Foreground="White"
+                            Width="120"
+                            Height="35" Click="wordBtn_Click"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

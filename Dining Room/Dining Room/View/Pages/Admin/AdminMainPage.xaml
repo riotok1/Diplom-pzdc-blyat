@@ -1,0 +1,85 @@
+﻿<Page x:Class="Dining_Room.View.Pages.Admin.AdminMainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Dining_Room.View.Pages.Admin"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1000"
+      Title="AdminMainPage">
+
+    <Grid>
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.2*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <StackPanel VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Orientation="Horizontal">
+                    <TextBlock Text="Вы вошли как:"
+                               FontSize="15"
+                               Width="110"/>
+                    <TextBlock x:Name="managerSurnameTxb"
+                               FontSize="15"
+                               FontWeight="Bold"
+                               Width="70"/>
+                    <TextBlock x:Name="managerNameTxb"
+                               FontWeight="Bold"
+                               FontSize="15"
+                               Width="45"/>
+                    <TextBlock Text="- заведующая столовой"
+                               FontSize="15"/>
+                </StackPanel>
+            </Grid>
+            
+            <Grid Grid.Row="1">
+                <StackPanel VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Orientation="Vertical">
+                    <Button x:Name="workersBtn"
+                            Content="Подсистема сотрудников"
+                            Background="Black"
+                            BorderBrush="Black"
+                            Foreground="White"
+                            Height="50"
+                            Width="300"
+                            Margin="0,0,0,15" Click="workersBtn_Click"/>
+                    <Button x:Name="dishesBtn"
+                            Content="Подсистема блюд"
+                            Background="Black"
+                            BorderBrush="Black"
+                            Foreground="White"
+                            Height="50"
+                            Width="300"
+                            Margin="0,0,0,15" Click="dishesBtn_Click"/>
+                    <Button x:Name="productsBtn"
+                            Content="Подсистема поставок"
+                            Background="Black"
+                            BorderBrush="Black"
+                            Foreground="White"
+                            Height="50"
+                            Width="300" Click="productsBtn_Click"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <StackPanel VerticalAlignment="Center"
+                            HorizontalAlignment="Center">
+                    <Button x:Name="backBtn"
+                            Content="Назад"
+                            Background="Black"
+                            BorderBrush="Black"
+                            Foreground="White"
+                            Width="120"
+                            Height="35" Click="backBtn_Click"/>
+                </StackPanel>
+            </Grid>
+            
+        </Grid>
+    </Grid>
+</Page>

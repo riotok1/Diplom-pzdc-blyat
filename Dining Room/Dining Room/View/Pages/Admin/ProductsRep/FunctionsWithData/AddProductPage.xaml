@@ -1,0 +1,140 @@
+﻿<Page x:Class="Dining_Room.View.Pages.Admin.ProductsRep.FunctionsWithData.AddProductPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Dining_Room.View.Pages.Admin.ProductsRep.FunctionsWithData"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1200"
+      Title="AddProductPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <StackPanel VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,0,0,20">
+                        <TextBlock Text="Прикрепить сотрудника:"
+                                   FontSize="15"
+                                   Width="190"/>
+                        <ComboBox x:Name="staffCmb"
+                                 FontSize="15"
+                                 Width="200"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,0,0,20">
+                        <TextBlock Text="Продукт:"
+                                   FontSize="15"
+                                   Width="190"/>
+                        <ComboBox x:Name="productCmb"
+                                 FontSize="15"
+                                 Width="200" SelectionChanged="productCmb_SelectionChanged"/>
+                        <TextBlock Name="txbCount"
+                           Width="30"
+                           FontSize="15"
+                           Text="1"
+                           Margin="10,0,0,0"
+                           VerticalAlignment="Center"/>
+                        <Button Content="+"
+                                Click="btnAddCount_Click"
+                                Foreground="White"
+                                Background="Black"
+                                Margin="0,0,5,0"/>
+                        <Button Content="-"
+                                Foreground="White"
+                                Background="Black"
+                                Click="btnRemoveCount_Click"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,0,0,20">
+                        <TextBlock Text="Сумма:"
+                                   FontSize="15"
+                                   Width="190"/>
+                        <TextBox x:Name="totalSum"
+                                 FontSize="15"
+                                 Width="200"/>
+                    </StackPanel>
+                    <StackPanel VerticalAlignment="Center"
+                                HorizontalAlignment="Left">
+                        <Button x:Name="checkBtn"
+                                Content="Добавить"
+                                Background="Black"
+                                BorderBrush="Black"
+                                Foreground="White"
+                                Width="120"
+                                Height="35" Click="checkBtn_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="0.2*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <DataGrid x:Name="dataView"
+                              AutoGenerateColumns="False"
+                              IsReadOnly="True">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Сотрудник" Width="*" Binding="{Binding Workers.fullName}"/>
+                            <DataGridTextColumn Header="Дата поставки" Width="*" Binding="{Binding YesterdayDate, StringFormat=dd.MM.yyy}"/>
+                            <DataGridTextColumn Header="Продукт" Width="*" Binding="{Binding Products.ProductName}"/>
+                            <DataGridTextColumn Header="Количество" Width="*" Binding="{Binding Count}"/>
+                            <DataGridTextColumn Header="Сумма" Width="*" Binding="{Binding TotalSum}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <StackPanel VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                Margin="20">
+                        <Button x:Name="removeBtn"
+                                Content="Удалить"
+                                Background="Black"
+                                BorderBrush="Black"
+                                Foreground="White"
+                                Width="120"
+                                Height="35"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal">
+                <Button x:Name="backBtn"
+                        Content="Назад"
+                        Background="Black"
+                        BorderBrush="Black"
+                        Foreground="White"
+                        Width="120"
+                        Height="35"
+                        Margin="0,0,20,0" Click="backBtn_Click"/>
+                <Button x:Name="addBtn"
+                        Content="Оформить"
+                        Background="Black"
+                        BorderBrush="Black"
+                        Foreground="White"
+                        Width="120"
+                        Height="35" Click="addBtn_Click"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>
