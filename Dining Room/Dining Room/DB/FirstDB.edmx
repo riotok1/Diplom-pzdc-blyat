@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище ManagerDiningRoomModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Хранилище ManagerDiningRoomModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Basket">
           <Key>
             <PropertyRef Name="ID" />
@@ -12,7 +12,6 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ProductID" Type="int" Nullable="false" />
           <Property Name="WorkersID" Type="int" Nullable="false" />
-          <Property Name="YesterdayDate" Type="date" Nullable="false" />
           <Property Name="Count" Type="int" Nullable="false" />
           <Property Name="TotalSum" Type="float" Nullable="false" />
         </EntityType>
@@ -35,6 +34,17 @@
           <Property Name="Count" Type="int" Nullable="false" />
           <Property Name="Price" Type="bigint" Nullable="false" />
         </EntityType>
+        <EntityType Name="DishBacket">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DishID" Type="int" Nullable="false" />
+          <Property Name="WorkerID" Type="int" Nullable="false" />
+          <Property Name="TotalSum" Type="float" Nullable="false" />
+          <Property Name="YesterdayDate" Type="date" Nullable="false" />
+          <Property Name="Count" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="Manager">
           <Key>
             <PropertyRef Name="ID" />
@@ -43,6 +53,15 @@
           <Property Name="Surname" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="SignID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MenuWeek">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MenuID" Type="int" Nullable="false" />
+          <Property Name="WeekID" Type="int" Nullable="false" />
+          <Property Name="YesterdayDate" Type="date" Nullable="false" />
         </EntityType>
         <EntityType Name="Products">
           <Key>
@@ -65,9 +84,9 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="LogIn" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="Password" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="RoleID" Type="nchar" MaxLength="1" Nullable="false" />
+          <Property Name="LogIn" Type="nvarchar" MaxLength="100" />
+          <Property Name="Password" Type="nvarchar" MaxLength="100" />
+          <Property Name="RoleID" Type="nchar" MaxLength="1" />
         </EntityType>
         <EntityType Name="Supply">
           <Key>
@@ -76,9 +95,17 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ProductID" Type="int" Nullable="false" />
           <Property Name="WorkersID" Type="int" Nullable="false" />
-          <Property Name="YesterdayDate" Type="date" Nullable="false" />
           <Property Name="Count" Type="int" Nullable="false" />
           <Property Name="TotalSum" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SupplyWeek">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SupplyID" Type="int" Nullable="false" />
+          <Property Name="WeekID" Type="int" Nullable="false" />
+          <Property Name="YesterdayDate" Type="date" Nullable="false" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -90,6 +117,13 @@
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
+        <EntityType Name="WeekCategory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Day" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
         <EntityType Name="Workers">
           <Key>
             <PropertyRef Name="ID" />
@@ -99,6 +133,7 @@
           <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Patronymic" Type="nvarchar" MaxLength="100" />
           <Property Name="Post" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="SignInID" Type="int" />
         </EntityType>
         <EntityType Name="YesterdayMenu">
           <Key>
@@ -107,7 +142,9 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="DishID" Type="int" Nullable="false" />
           <Property Name="CookID" Type="int" Nullable="false" />
+          <Property Name="TotalSum" Type="float" Nullable="false" />
           <Property Name="YesterdayDate" Type="date" Nullable="false" />
+          <Property Name="Count" Type="int" Nullable="false" />
         </EntityType>
         <Association Name="FK_Basket_Products">
           <End Role="Products" Type="Self.Products" Multiplicity="1">
@@ -149,6 +186,34 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_DishBacket_Dish">
+          <End Role="Dish" Type="Self.Dish" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DishBacket" Type="Self.DishBacket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dish">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DishBacket">
+              <PropertyRef Name="DishID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DishBacket_Workers">
+          <End Role="Workers" Type="Self.Workers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DishBacket" Type="Self.DishBacket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workers">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DishBacket">
+              <PropertyRef Name="WorkerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Manager_SignID_SignIn_ID">
           <End Role="SignIn" Type="Self.SignIn" Multiplicity="1" />
           <End Role="Manager" Type="Self.Manager" Multiplicity="*" />
@@ -161,8 +226,36 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_MenuWeek_WeekCategory">
+          <End Role="WeekCategory" Type="Self.WeekCategory" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="MenuWeek" Type="Self.MenuWeek" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WeekCategory">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MenuWeek">
+              <PropertyRef Name="WeekID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MenuWeek_YesterdayMenu">
+          <End Role="YesterdayMenu" Type="Self.YesterdayMenu" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="MenuWeek" Type="Self.MenuWeek" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="YesterdayMenu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MenuWeek">
+              <PropertyRef Name="MenuID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_SignIn_RoleID_Role_IDRole">
-          <End Role="Role" Type="Self.Role" Multiplicity="1" />
+          <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
           <End Role="SignIn" Type="Self.SignIn" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Role">
@@ -201,6 +294,48 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_SupplyWeek_Supply">
+          <End Role="Supply" Type="Self.Supply" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="SupplyWeek" Type="Self.SupplyWeek" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Supply">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SupplyWeek">
+              <PropertyRef Name="SupplyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SupplyWeek_WeekCategory">
+          <End Role="WeekCategory" Type="Self.WeekCategory" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="SupplyWeek" Type="Self.SupplyWeek" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WeekCategory">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SupplyWeek">
+              <PropertyRef Name="WeekID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Workers_SignIn">
+          <End Role="SignIn" Type="Self.SignIn" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Workers" Type="Self.Workers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SignIn">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Workers">
+              <PropertyRef Name="SignInID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_YesterdayMenu_Dish">
           <End Role="Dish" Type="Self.Dish" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -233,12 +368,16 @@
           <EntitySet Name="Basket" EntityType="Self.Basket" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Dish" EntityType="Self.Dish" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DishBacket" EntityType="Self.DishBacket" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Manager" EntityType="Self.Manager" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MenuWeek" EntityType="Self.MenuWeek" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SignIn" EntityType="Self.SignIn" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Supply" EntityType="Self.Supply" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SupplyWeek" EntityType="Self.SupplyWeek" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WeekCategory" EntityType="Self.WeekCategory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Workers" EntityType="Self.Workers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="YesterdayMenu" EntityType="Self.YesterdayMenu" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Basket_Products" Association="Self.FK_Basket_Products">
@@ -253,9 +392,25 @@
             <End Role="Category" EntitySet="Category" />
             <End Role="Dish" EntitySet="Dish" />
           </AssociationSet>
+          <AssociationSet Name="FK_DishBacket_Dish" Association="Self.FK_DishBacket_Dish">
+            <End Role="Dish" EntitySet="Dish" />
+            <End Role="DishBacket" EntitySet="DishBacket" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DishBacket_Workers" Association="Self.FK_DishBacket_Workers">
+            <End Role="Workers" EntitySet="Workers" />
+            <End Role="DishBacket" EntitySet="DishBacket" />
+          </AssociationSet>
           <AssociationSet Name="FK_Manager_SignID_SignIn_ID" Association="Self.FK_Manager_SignID_SignIn_ID">
             <End Role="SignIn" EntitySet="SignIn" />
             <End Role="Manager" EntitySet="Manager" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MenuWeek_WeekCategory" Association="Self.FK_MenuWeek_WeekCategory">
+            <End Role="WeekCategory" EntitySet="WeekCategory" />
+            <End Role="MenuWeek" EntitySet="MenuWeek" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MenuWeek_YesterdayMenu" Association="Self.FK_MenuWeek_YesterdayMenu">
+            <End Role="YesterdayMenu" EntitySet="YesterdayMenu" />
+            <End Role="MenuWeek" EntitySet="MenuWeek" />
           </AssociationSet>
           <AssociationSet Name="FK_SignIn_RoleID_Role_IDRole" Association="Self.FK_SignIn_RoleID_Role_IDRole">
             <End Role="Role" EntitySet="Role" />
@@ -269,6 +424,18 @@
             <End Role="Workers" EntitySet="Workers" />
             <End Role="Supply" EntitySet="Supply" />
           </AssociationSet>
+          <AssociationSet Name="FK_SupplyWeek_Supply" Association="Self.FK_SupplyWeek_Supply">
+            <End Role="Supply" EntitySet="Supply" />
+            <End Role="SupplyWeek" EntitySet="SupplyWeek" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SupplyWeek_WeekCategory" Association="Self.FK_SupplyWeek_WeekCategory">
+            <End Role="WeekCategory" EntitySet="WeekCategory" />
+            <End Role="SupplyWeek" EntitySet="SupplyWeek" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Workers_SignIn" Association="Self.FK_Workers_SignIn">
+            <End Role="SignIn" EntitySet="SignIn" />
+            <End Role="Workers" EntitySet="Workers" />
+          </AssociationSet>
           <AssociationSet Name="FK_YesterdayMenu_Dish" Association="Self.FK_YesterdayMenu_Dish">
             <End Role="Dish" EntitySet="Dish" />
             <End Role="YesterdayMenu" EntitySet="YesterdayMenu" />
@@ -278,8 +445,7 @@
             <End Role="YesterdayMenu" EntitySet="YesterdayMenu" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ManagerDiningRoomModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -290,7 +456,6 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ProductID" Type="Int32" Nullable="false" />
           <Property Name="WorkersID" Type="Int32" Nullable="false" />
-          <Property Name="YesterdayDate" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Count" Type="Int32" Nullable="false" />
           <Property Name="TotalSum" Type="Double" Nullable="false" />
           <NavigationProperty Name="Products" Relationship="Self.FK_Basket_Products" FromRole="Basket" ToRole="Products" />
@@ -316,7 +481,21 @@
           <Property Name="Count" Type="Int32" Nullable="false" />
           <Property Name="Price" Type="Int64" Nullable="false" />
           <NavigationProperty Name="Category" Relationship="Self.FK_Dish_CategoryID_Category_ID" FromRole="Dish" ToRole="Category" />
+          <NavigationProperty Name="DishBacket" Relationship="Self.FK_DishBacket_Dish" FromRole="Dish" ToRole="DishBacket" />
           <NavigationProperty Name="YesterdayMenu" Relationship="Self.FK_YesterdayMenu_Dish" FromRole="Dish" ToRole="YesterdayMenu" />
+        </EntityType>
+        <EntityType Name="DishBacket">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DishID" Type="Int32" Nullable="false" />
+          <Property Name="WorkerID" Type="Int32" Nullable="false" />
+          <Property Name="TotalSum" Type="Double" Nullable="false" />
+          <Property Name="YesterdayDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Count" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Dish" Relationship="Self.FK_DishBacket_Dish" FromRole="DishBacket" ToRole="Dish" />
+          <NavigationProperty Name="Workers" Relationship="Self.FK_DishBacket_Workers" FromRole="DishBacket" ToRole="Workers" />
         </EntityType>
         <EntityType Name="Manager">
           <Key>
@@ -327,6 +506,17 @@
           <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="SignID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="SignIn" Relationship="Self.FK_Manager_SignID_SignIn_ID" FromRole="Manager" ToRole="SignIn" />
+        </EntityType>
+        <EntityType Name="MenuWeek">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MenuID" Type="Int32" Nullable="false" />
+          <Property Name="WeekID" Type="Int32" Nullable="false" />
+          <Property Name="YesterdayDate" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="WeekCategory" Relationship="Self.FK_MenuWeek_WeekCategory" FromRole="MenuWeek" ToRole="WeekCategory" />
+          <NavigationProperty Name="YesterdayMenu" Relationship="Self.FK_MenuWeek_YesterdayMenu" FromRole="MenuWeek" ToRole="YesterdayMenu" />
         </EntityType>
         <EntityType Name="Products">
           <Key>
@@ -352,11 +542,12 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="LogIn" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="RoleID" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="LogIn" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="RoleID" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
           <NavigationProperty Name="Manager" Relationship="Self.FK_Manager_SignID_SignIn_ID" FromRole="SignIn" ToRole="Manager" />
           <NavigationProperty Name="Role" Relationship="Self.FK_SignIn_RoleID_Role_IDRole" FromRole="SignIn" ToRole="Role" />
+          <NavigationProperty Name="Workers" Relationship="ManagerDiningRoomModel.FK_Workers_SignIn" FromRole="SignIn" ToRole="Workers" />
         </EntityType>
         <EntityType Name="Supply">
           <Key>
@@ -365,11 +556,22 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ProductID" Type="Int32" Nullable="false" />
           <Property Name="WorkersID" Type="Int32" Nullable="false" />
-          <Property Name="YesterdayDate" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Count" Type="Int32" Nullable="false" />
           <Property Name="TotalSum" Type="Double" Nullable="false" />
           <NavigationProperty Name="Products" Relationship="Self.FK_Supply_Products" FromRole="Supply" ToRole="Products" />
           <NavigationProperty Name="Workers" Relationship="Self.FK_Supply_Workers" FromRole="Supply" ToRole="Workers" />
+          <NavigationProperty Name="SupplyWeek" Relationship="Self.FK_SupplyWeek_Supply" FromRole="Supply" ToRole="SupplyWeek" />
+        </EntityType>
+        <EntityType Name="SupplyWeek">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SupplyID" Type="Int32" Nullable="false" />
+          <Property Name="WeekID" Type="Int32" Nullable="false" />
+          <Property Name="YesterdayDate" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Supply" Relationship="Self.FK_SupplyWeek_Supply" FromRole="SupplyWeek" ToRole="Supply" />
+          <NavigationProperty Name="WeekCategory" Relationship="Self.FK_SupplyWeek_WeekCategory" FromRole="SupplyWeek" ToRole="WeekCategory" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -381,6 +583,15 @@
           <Property Name="version" Type="Int32" />
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
+        <EntityType Name="WeekCategory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Day" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="MenuWeek" Relationship="Self.FK_MenuWeek_WeekCategory" FromRole="WeekCategory" ToRole="MenuWeek" />
+          <NavigationProperty Name="SupplyWeek" Relationship="Self.FK_SupplyWeek_WeekCategory" FromRole="WeekCategory" ToRole="SupplyWeek" />
+        </EntityType>
         <EntityType Name="Workers">
           <Key>
             <PropertyRef Name="ID" />
@@ -391,8 +602,11 @@
           <Property Name="Patronymic" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Post" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Basket" Relationship="Self.FK_Basket_Workers" FromRole="Workers" ToRole="Basket" />
+          <NavigationProperty Name="DishBacket" Relationship="Self.FK_DishBacket_Workers" FromRole="Workers" ToRole="DishBacket" />
           <NavigationProperty Name="Supply" Relationship="Self.FK_Supply_Workers" FromRole="Workers" ToRole="Supply" />
           <NavigationProperty Name="YesterdayMenu" Relationship="Self.FK_YesterdayMenu_Workers" FromRole="Workers" ToRole="YesterdayMenu" />
+          <Property Name="SignInID" Type="Int32" />
+          <NavigationProperty Name="SignIn" Relationship="ManagerDiningRoomModel.FK_Workers_SignIn" FromRole="Workers" ToRole="SignIn" />
         </EntityType>
         <EntityType Name="YesterdayMenu">
           <Key>
@@ -401,8 +615,11 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="DishID" Type="Int32" Nullable="false" />
           <Property Name="CookID" Type="Int32" Nullable="false" />
+          <Property Name="TotalSum" Type="Double" Nullable="false" />
           <Property Name="YesterdayDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Count" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Dish" Relationship="Self.FK_YesterdayMenu_Dish" FromRole="YesterdayMenu" ToRole="Dish" />
+          <NavigationProperty Name="MenuWeek" Relationship="Self.FK_MenuWeek_YesterdayMenu" FromRole="YesterdayMenu" ToRole="MenuWeek" />
           <NavigationProperty Name="Workers" Relationship="Self.FK_YesterdayMenu_Workers" FromRole="YesterdayMenu" ToRole="Workers" />
         </EntityType>
         <Association Name="FK_Basket_Products">
@@ -445,6 +662,20 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_DishBacket_Dish">
+          <End Role="Dish" Type="Self.Dish" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DishBacket" Type="Self.DishBacket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dish">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DishBacket">
+              <PropertyRef Name="DishID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_YesterdayMenu_Dish">
           <End Role="Dish" Type="Self.Dish" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -459,6 +690,20 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_DishBacket_Workers">
+          <End Role="Workers" Type="Self.Workers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DishBacket" Type="Self.DishBacket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workers">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DishBacket">
+              <PropertyRef Name="WorkerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Manager_SignID_SignIn_ID">
           <End Role="SignIn" Type="Self.SignIn" Multiplicity="1" />
           <End Role="Manager" Type="Self.Manager" Multiplicity="*" />
@@ -468,6 +713,34 @@
             </Principal>
             <Dependent Role="Manager">
               <PropertyRef Name="SignID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MenuWeek_WeekCategory">
+          <End Role="WeekCategory" Type="Self.WeekCategory" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="MenuWeek" Type="Self.MenuWeek" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WeekCategory">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MenuWeek">
+              <PropertyRef Name="WeekID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MenuWeek_YesterdayMenu">
+          <End Role="YesterdayMenu" Type="Self.YesterdayMenu" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="MenuWeek" Type="Self.MenuWeek" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="YesterdayMenu">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MenuWeek">
+              <PropertyRef Name="MenuID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -486,7 +759,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_SignIn_RoleID_Role_IDRole">
-          <End Role="Role" Type="Self.Role" Multiplicity="1" />
+          <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
           <End Role="SignIn" Type="Self.SignIn" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Role">
@@ -511,6 +784,34 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_SupplyWeek_Supply">
+          <End Role="Supply" Type="Self.Supply" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="SupplyWeek" Type="Self.SupplyWeek" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Supply">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SupplyWeek">
+              <PropertyRef Name="SupplyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SupplyWeek_WeekCategory">
+          <End Role="WeekCategory" Type="Self.WeekCategory" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="SupplyWeek" Type="Self.SupplyWeek" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WeekCategory">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SupplyWeek">
+              <PropertyRef Name="WeekID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_YesterdayMenu_Workers">
           <End Role="Workers" Type="Self.Workers" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -529,12 +830,16 @@
           <EntitySet Name="Basket" EntityType="Self.Basket" />
           <EntitySet Name="Category" EntityType="Self.Category" />
           <EntitySet Name="Dish" EntityType="Self.Dish" />
+          <EntitySet Name="DishBacket" EntityType="Self.DishBacket" />
           <EntitySet Name="Manager" EntityType="Self.Manager" />
+          <EntitySet Name="MenuWeek" EntityType="Self.MenuWeek" />
           <EntitySet Name="Products" EntityType="Self.Products" />
           <EntitySet Name="Role" EntityType="Self.Role" />
           <EntitySet Name="SignIn" EntityType="Self.SignIn" />
           <EntitySet Name="Supply" EntityType="Self.Supply" />
+          <EntitySet Name="SupplyWeek" EntityType="Self.SupplyWeek" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="WeekCategory" EntityType="Self.WeekCategory" />
           <EntitySet Name="Workers" EntityType="Self.Workers" />
           <EntitySet Name="YesterdayMenu" EntityType="Self.YesterdayMenu" />
           <AssociationSet Name="FK_Basket_Products" Association="Self.FK_Basket_Products">
@@ -549,13 +854,29 @@
             <End Role="Category" EntitySet="Category" />
             <End Role="Dish" EntitySet="Dish" />
           </AssociationSet>
+          <AssociationSet Name="FK_DishBacket_Dish" Association="Self.FK_DishBacket_Dish">
+            <End Role="Dish" EntitySet="Dish" />
+            <End Role="DishBacket" EntitySet="DishBacket" />
+          </AssociationSet>
           <AssociationSet Name="FK_YesterdayMenu_Dish" Association="Self.FK_YesterdayMenu_Dish">
             <End Role="Dish" EntitySet="Dish" />
             <End Role="YesterdayMenu" EntitySet="YesterdayMenu" />
           </AssociationSet>
+          <AssociationSet Name="FK_DishBacket_Workers" Association="Self.FK_DishBacket_Workers">
+            <End Role="Workers" EntitySet="Workers" />
+            <End Role="DishBacket" EntitySet="DishBacket" />
+          </AssociationSet>
           <AssociationSet Name="FK_Manager_SignID_SignIn_ID" Association="Self.FK_Manager_SignID_SignIn_ID">
             <End Role="SignIn" EntitySet="SignIn" />
             <End Role="Manager" EntitySet="Manager" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MenuWeek_WeekCategory" Association="Self.FK_MenuWeek_WeekCategory">
+            <End Role="WeekCategory" EntitySet="WeekCategory" />
+            <End Role="MenuWeek" EntitySet="MenuWeek" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MenuWeek_YesterdayMenu" Association="Self.FK_MenuWeek_YesterdayMenu">
+            <End Role="YesterdayMenu" EntitySet="YesterdayMenu" />
+            <End Role="MenuWeek" EntitySet="MenuWeek" />
           </AssociationSet>
           <AssociationSet Name="FK_Supply_Products" Association="Self.FK_Supply_Products">
             <End Role="Products" EntitySet="Products" />
@@ -569,11 +890,37 @@
             <End Role="Workers" EntitySet="Workers" />
             <End Role="Supply" EntitySet="Supply" />
           </AssociationSet>
+          <AssociationSet Name="FK_SupplyWeek_Supply" Association="Self.FK_SupplyWeek_Supply">
+            <End Role="Supply" EntitySet="Supply" />
+            <End Role="SupplyWeek" EntitySet="SupplyWeek" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SupplyWeek_WeekCategory" Association="Self.FK_SupplyWeek_WeekCategory">
+            <End Role="WeekCategory" EntitySet="WeekCategory" />
+            <End Role="SupplyWeek" EntitySet="SupplyWeek" />
+          </AssociationSet>
           <AssociationSet Name="FK_YesterdayMenu_Workers" Association="Self.FK_YesterdayMenu_Workers">
             <End Role="Workers" EntitySet="Workers" />
             <End Role="YesterdayMenu" EntitySet="YesterdayMenu" />
           </AssociationSet>
+          <AssociationSet Name="FK_Workers_SignIn" Association="ManagerDiningRoomModel.FK_Workers_SignIn">
+            <End Role="SignIn" EntitySet="SignIn" />
+            <End Role="Workers" EntitySet="Workers" />
+          </AssociationSet>
         </EntityContainer>
+        <Association Name="FK_Workers_SignIn">
+          <End Type="ManagerDiningRoomModel.SignIn" Role="SignIn" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="ManagerDiningRoomModel.Workers" Role="Workers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SignIn">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Workers">
+              <PropertyRef Name="SignInID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -586,7 +933,6 @@
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="ProductID" ColumnName="ProductID" />
                 <ScalarProperty Name="WorkersID" ColumnName="WorkersID" />
-                <ScalarProperty Name="YesterdayDate" ColumnName="YesterdayDate" />
                 <ScalarProperty Name="Count" ColumnName="Count" />
                 <ScalarProperty Name="TotalSum" ColumnName="TotalSum" />
               </MappingFragment>
@@ -613,6 +959,18 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="DishBacket">
+            <EntityTypeMapping TypeName="ManagerDiningRoomModel.DishBacket">
+              <MappingFragment StoreEntitySet="DishBacket">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DishID" ColumnName="DishID" />
+                <ScalarProperty Name="WorkerID" ColumnName="WorkerID" />
+                <ScalarProperty Name="TotalSum" ColumnName="TotalSum" />
+                <ScalarProperty Name="YesterdayDate" ColumnName="YesterdayDate" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Manager">
             <EntityTypeMapping TypeName="ManagerDiningRoomModel.Manager">
               <MappingFragment StoreEntitySet="Manager">
@@ -620,6 +978,16 @@
                 <ScalarProperty Name="Surname" ColumnName="Surname" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="SignID" ColumnName="SignID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MenuWeek">
+            <EntityTypeMapping TypeName="ManagerDiningRoomModel.MenuWeek">
+              <MappingFragment StoreEntitySet="MenuWeek">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+                <ScalarProperty Name="WeekID" ColumnName="WeekID" />
+                <ScalarProperty Name="YesterdayDate" ColumnName="YesterdayDate" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -657,9 +1025,18 @@
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="ProductID" ColumnName="ProductID" />
                 <ScalarProperty Name="WorkersID" ColumnName="WorkersID" />
-                <ScalarProperty Name="YesterdayDate" ColumnName="YesterdayDate" />
                 <ScalarProperty Name="Count" ColumnName="Count" />
                 <ScalarProperty Name="TotalSum" ColumnName="TotalSum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SupplyWeek">
+            <EntityTypeMapping TypeName="ManagerDiningRoomModel.SupplyWeek">
+              <MappingFragment StoreEntitySet="SupplyWeek">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="SupplyID" ColumnName="SupplyID" />
+                <ScalarProperty Name="WeekID" ColumnName="WeekID" />
+                <ScalarProperty Name="YesterdayDate" ColumnName="YesterdayDate" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -674,9 +1051,18 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="WeekCategory">
+            <EntityTypeMapping TypeName="ManagerDiningRoomModel.WeekCategory">
+              <MappingFragment StoreEntitySet="WeekCategory">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Day" ColumnName="Day" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Workers">
             <EntityTypeMapping TypeName="ManagerDiningRoomModel.Workers">
               <MappingFragment StoreEntitySet="Workers">
+                <ScalarProperty Name="SignInID" ColumnName="SignInID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Surname" ColumnName="Surname" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -691,7 +1077,9 @@
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="DishID" ColumnName="DishID" />
                 <ScalarProperty Name="CookID" ColumnName="CookID" />
+                <ScalarProperty Name="TotalSum" ColumnName="TotalSum" />
                 <ScalarProperty Name="YesterdayDate" ColumnName="YesterdayDate" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

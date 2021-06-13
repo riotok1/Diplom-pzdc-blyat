@@ -17,6 +17,7 @@ namespace Dining_Room.DB
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Dish()
         {
+            this.DishBacket = new HashSet<DishBacket>();
             this.YesterdayMenu = new HashSet<YesterdayMenu>();
         }
     
@@ -29,6 +30,8 @@ namespace Dining_Room.DB
         public long Price { get; set; }
     
         public virtual Category Category { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DishBacket> DishBacket { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<YesterdayMenu> YesterdayMenu { get; set; }
     }

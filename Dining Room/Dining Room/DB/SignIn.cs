@@ -18,6 +18,7 @@ namespace Dining_Room.DB
         public SignIn()
         {
             this.Manager = new HashSet<Manager>();
+            this.Workers = new HashSet<Workers>();
         }
     
         public int ID { get; set; }
@@ -28,5 +29,7 @@ namespace Dining_Room.DB
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Manager> Manager { get; set; }
         public virtual Role Role { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Workers> Workers { get; set; }
     }
 }

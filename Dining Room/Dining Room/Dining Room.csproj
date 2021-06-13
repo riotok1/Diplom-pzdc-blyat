@@ -84,11 +84,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Pages\Admin\DishesRep\DishesSystemPate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Pages\Admin\DishesRep\FunctionsWithData\AddPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Pages\Admin\DishesRep\FunctionsWithData\EditPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\Admin\DishesRep\FunctionsWithData\YesterdayMenuPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\Admin\DishesRep\YesterdayMenuViewPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -132,10 +144,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Pages\User\UserMainPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -154,6 +162,10 @@
     <Compile Include="DB\Dish.cs">
       <DependentUpon>FirstDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="DB\DishBacket.cs">
+      <DependentUpon>FirstDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DishPartial.cs" />
     <Compile Include="DB\FirstDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -172,6 +184,9 @@
     <Compile Include="DB\Manager.cs">
       <DependentUpon>FirstDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="DB\MenuWeek.cs">
+      <DependentUpon>FirstDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="DB\Products.cs">
       <DependentUpon>FirstDB.tt</DependentUpon>
     </Compile>
@@ -185,7 +200,13 @@
     <Compile Include="DB\Supply.cs">
       <DependentUpon>FirstDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="DB\SupplyWeek.cs">
+      <DependentUpon>FirstDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="DB\sysdiagrams.cs">
+      <DependentUpon>FirstDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\WeekCategory.cs">
       <DependentUpon>FirstDB.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Workers.cs">
@@ -201,11 +222,20 @@
     <Compile Include="View\Pages\Admin\DishesRep\DishesMainPage.xaml.cs">
       <DependentUpon>DishesMainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Pages\Admin\DishesRep\DishesSystemPate.xaml.cs">
+      <DependentUpon>DishesSystemPate.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Pages\Admin\DishesRep\FunctionsWithData\AddPage.xaml.cs">
       <DependentUpon>AddPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Pages\Admin\DishesRep\FunctionsWithData\EditPage.xaml.cs">
       <DependentUpon>EditPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\Admin\DishesRep\FunctionsWithData\YesterdayMenuPage.xaml.cs">
+      <DependentUpon>YesterdayMenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\Admin\DishesRep\YesterdayMenuViewPage.xaml.cs">
+      <DependentUpon>YesterdayMenuViewPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Pages\Admin\ProductsRep\DeliveryMainPage.xaml.cs">
       <DependentUpon>DeliveryMainPage.xaml</DependentUpon>
@@ -236,9 +266,6 @@
     </Compile>
     <Compile Include="View\Pages\AutorizationPage.xaml.cs">
       <DependentUpon>AutorizationPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Pages\User\UserMainPage.xaml.cs">
-      <DependentUpon>UserMainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

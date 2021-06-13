@@ -51,6 +51,7 @@ namespace Dining_Room.View.Pages.Admin.DishesRep.FunctionsWithData
             var dishCategory = ConnectClass.db.Category.FirstOrDefault(item => item.Title == categoryTxb.Text);
             newDish.CategoryID = dishCategory.ID;
             newDish.Volume = volumeTxb.Text;
+            newDish.Count = Convert.ToInt32(countTxb.Text);
             newDish.Price = Convert.ToInt64(priceTxb.Text);
 
             ConnectClass.db.Dish.Add(newDish);

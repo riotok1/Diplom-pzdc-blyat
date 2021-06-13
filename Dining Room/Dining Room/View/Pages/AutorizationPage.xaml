@@ -35,18 +35,12 @@
                 </StackPanel>
                 <StackPanel Orientation="Vertical">
                     <Button x:Name="adminBtn"
-                            Content="Войти как администратор"
+                            Content="Войти"
                             Background="Black"
                             BorderBrush="Black"
                             Foreground="White"
                             Height="40"
-                            Margin="0,0,0,10" Click="adminBtn_Click"/>
-                    <Button x:Name="userBtn"
-                            Content="Войти как гость"
-                            Background="Black"
-                            BorderBrush="Black"
-                            Foreground="White"
-                            Height="40" Click="userBtn_Click"/>
+                            Click="adminBtn_Click"/>
                 </StackPanel>
             </StackPanel>
         </Grid>

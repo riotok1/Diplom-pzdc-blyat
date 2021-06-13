@@ -30,11 +30,13 @@
                               Width="140">
                         <ComboBoxItem Content="Горячее"/>
                         <ComboBoxItem Content="Холодное"/>
+                        <ComboBoxItem Content="Напитки"/>
                         <ComboBoxItem Content="Все"/>
                     </ComboBox>
                 </StackPanel>
                 <StackPanel VerticalAlignment="Center"
-                            HorizontalAlignment="Center"
+                            HorizontalAlignment="Right"
+                            Margin="20"
                             Orientation="Horizontal">
                     <TextBlock Text="Поиск:"
                                FontSize="15"
@@ -44,10 +46,17 @@
                              Width="200" TextChanged="searchTxb_TextChanged"/>
                 </StackPanel>
                 <StackPanel VerticalAlignment="Center"
-                            HorizontalAlignment="Right"
-                            Margin="20">
-                    <TextBlock x:Name="countDishes"
-                               FontSize="15"/>
+                            HorizontalAlignment="Center"
+                            Orientation="Horizontal">
+                    <TextBlock Text="Сортировка: "
+                           VerticalAlignment="Center"/>
+                    <ComboBox Width="200"
+                          Name="SortComboBox"
+                          SelectionChanged="SortComboBox_SelectionChanged">
+                        <ComboBoxItem>Все</ComboBoxItem>
+                        <ComboBoxItem>По возрастанию цены</ComboBoxItem>
+                        <ComboBoxItem>По убыванию цены</ComboBoxItem>
+                    </ComboBox>
                 </StackPanel>
             </Grid>
 
@@ -75,6 +84,7 @@
                                         <Label Content="{Binding NameOfDish}" ContentStringFormat="Блюдо: {0}" FontSize="14" FontWeight="Bold"/>
                                         <Label Content="{Binding Category.Title}" ContentStringFormat="Категория: {0}" FontSize="14"/>
                                         <Label Content="{Binding Volume}" ContentStringFormat="Объем: {0}" FontSize="14"/>
+                                        <Label Content="{Binding Count}" ContentStringFormat="Количество: {0} порций" FontSize="14"/>
                                         <Label Content="{Binding Price}" ContentStringFormat="Стоимость: {0} руб." FontSize="14"/>
                                     </StackPanel>
                                 </Grid>

@@ -17,7 +17,6 @@ namespace Dining_Room.DB
         public int ID { get; set; }
         public int ProductID { get; set; }
         public int WorkersID { get; set; }
-        public System.DateTime YesterdayDate { get; set; }
         public int Count { get; set; }
         public double TotalSum { get; set; }
     

@@ -45,6 +45,7 @@ namespace Dining_Room.View.Pages.Admin.DishesRep.FunctionsWithData
                 imgLoad.Source = bitmap;
             }
 
+            countTxb.Text = Convert.ToString(selectedItem.Count);
             dishTxb.Text = selectedItem.NameOfDish;
             categoryTxb.SelectedItem = selectedItem.Category.Title;
             volumeTxb.Text = selectedItem.Volume;
@@ -71,6 +72,7 @@ namespace Dining_Room.View.Pages.Admin.DishesRep.FunctionsWithData
             var dishCategory = ConnectClass.db.Category.FirstOrDefault(item => item.Title == categoryTxb.Text);
             editDish.CategoryID = dishCategory.ID;
             editDish.Volume = volumeTxb.Text;
+            editDish.Count = Convert.ToInt32(countTxb.Text);
             editDish.Price = Convert.ToInt64(priceTxb.Text);
 
             ConnectClass.db.SaveChanges();

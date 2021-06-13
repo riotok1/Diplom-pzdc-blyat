@@ -16,14 +16,23 @@
 
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.9*"/>
+                <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
 
             <Grid Grid.Column="0">
                 <StackPanel VerticalAlignment="Center"
                             HorizontalAlignment="Center"
                             Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,0,0,20">
+                        <TextBlock Text="Выберите день:"
+                                   FontSize="15"
+                                   Width="190"/>
+                        <ComboBox x:Name="weekDayCmb"
+                                 FontSize="15"
+                                 Width="200"/>
+                    </StackPanel>
                     <StackPanel Orientation="Horizontal"
                                 Margin="0,0,0,20">
                         <TextBlock Text="Прикрепить сотрудника:"
@@ -82,7 +91,7 @@
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="0.2*"/>
+                    <RowDefinition Height="0.13*"/>
                 </Grid.RowDefinitions>
 
                 <Grid Grid.Row="0">
@@ -90,11 +99,11 @@
                               AutoGenerateColumns="False"
                               IsReadOnly="True">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Сотрудник" Width="*" Binding="{Binding Workers.fullName}"/>
-                            <DataGridTextColumn Header="Дата поставки" Width="*" Binding="{Binding YesterdayDate, StringFormat=dd.MM.yyy}"/>
+                            <DataGridTextColumn Header="Сотрудник" Width="*" Binding="{Binding Workers.secondFullName}"/>
+                            <DataGridTextColumn Header="Дата поставки" Width="*" Binding="{Binding YesterdayDate}"/>
                             <DataGridTextColumn Header="Продукт" Width="*" Binding="{Binding Products.ProductName}"/>
-                            <DataGridTextColumn Header="Количество" Width="*" Binding="{Binding Count}"/>
-                            <DataGridTextColumn Header="Сумма" Width="*" Binding="{Binding TotalSum}"/>
+                            <DataGridTextColumn Header="Количество" Width="0.7 *" Binding="{Binding Count}"/>
+                            <DataGridTextColumn Header="Сумма" Width="0.6*" Binding="{Binding TotalSum}"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>
@@ -109,7 +118,7 @@
                                 BorderBrush="Black"
                                 Foreground="White"
                                 Width="120"
-                                Height="35"/>
+                                Height="35" Click="removeBtn_Click"/>
                     </StackPanel>
                 </Grid>
             </Grid>

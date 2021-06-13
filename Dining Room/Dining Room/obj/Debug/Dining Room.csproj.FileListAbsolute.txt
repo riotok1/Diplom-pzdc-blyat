@@ -129,26 +129,6 @@ D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\Dini
 D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.exe
 D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.pdb
 D:\Preparation\C-applications\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.csprojAssemblyReference.cache
-C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\AdminMainPage.g.cs
-C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\DishesMainPage.g.cs
-C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\FunctionsWithData\AddPage.g.cs
-C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\FunctionsWithData\EditPage.g.cs
-C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\DeliveryMainPage.g.cs
-C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\FunctionsWithData\AddProductPage.g.cs
-C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\Market\MarketAddPage.g.cs
-C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\Market\MarketEditPage.g.cs
-C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\Market\MarketMainPAge.g.cs
-C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\ProductSystemPage.g.cs
-C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\AddWorkersPage.g.cs
-C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\EditWorkersPage.g.cs
-C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\StaffMainPage.g.cs
-C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\AutorizationPage.g.cs
-C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\User\UserMainPage.g.cs
-C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Windows\MainWindow.g.cs
-C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\App.g.cs
-C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room_Content.g.cs
-C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room_MarkupCompile.cache
-C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room_MarkupCompile.lref
 C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\bin\Debug\Dining Room.exe.config
 C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\bin\Debug\Dining Room.exe
 C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\bin\Debug\Dining Room.pdb
@@ -162,11 +142,36 @@ C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\bin\Debug\MaterialDe
 C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\AdminMainPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\DishesMainPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\DishesSystemPate.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\FunctionsWithData\AddPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\FunctionsWithData\EditPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\FunctionsWithData\YesterdayMenuPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\YesterdayMenuViewPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\DeliveryMainPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\FunctionsWithData\AddProductPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\Market\MarketAddPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\Market\MarketEditPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\Market\MarketMainPAge.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\ProductSystemPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\AddWorkersPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\EditWorkersPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\StaffMainPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\AutorizationPage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Windows\MainWindow.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\App.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room_Content.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room_MarkupCompile.cache
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room_MarkupCompile.lref
 C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\App.baml
 C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\AdminMainPage.baml
 C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\DishesMainPage.baml
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\DishesSystemPate.baml
 C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\FunctionsWithData\AddPage.baml
 C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\FunctionsWithData\EditPage.baml
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\FunctionsWithData\YesterdayMenuPage.baml
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\DishesRep\YesterdayMenuViewPage.baml
 C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\DeliveryMainPage.baml
 C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\FunctionsWithData\AddProductPage.baml
 C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\Market\MarketAddPage.baml
@@ -177,7 +182,6 @@ C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages
 C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\FunctionsWithData\EditWorkersPage.baml
 C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\WorkersRep\StaffMainPage.baml
 C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\AutorizationPage.baml
-C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\User\UserMainPage.baml
 C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Windows\MainWindow.baml
 C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.g.resources
 C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining_Room.Properties.Resources.resources
@@ -186,4 +190,3 @@ C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Roo
 C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.csproj.CopyComplete
 C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.exe
 C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.pdb
-C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.csprojAssemblyReference.cache

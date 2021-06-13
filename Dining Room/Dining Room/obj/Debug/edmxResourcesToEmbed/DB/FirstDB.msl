@@ -7,7 +7,6 @@
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="ProductID" ColumnName="ProductID" />
           <ScalarProperty Name="WorkersID" ColumnName="WorkersID" />
-          <ScalarProperty Name="YesterdayDate" ColumnName="YesterdayDate" />
           <ScalarProperty Name="Count" ColumnName="Count" />
           <ScalarProperty Name="TotalSum" ColumnName="TotalSum" />
         </MappingFragment>
@@ -34,6 +33,18 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="DishBacket">
+      <EntityTypeMapping TypeName="ManagerDiningRoomModel.DishBacket">
+        <MappingFragment StoreEntitySet="DishBacket">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DishID" ColumnName="DishID" />
+          <ScalarProperty Name="WorkerID" ColumnName="WorkerID" />
+          <ScalarProperty Name="TotalSum" ColumnName="TotalSum" />
+          <ScalarProperty Name="YesterdayDate" ColumnName="YesterdayDate" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Manager">
       <EntityTypeMapping TypeName="ManagerDiningRoomModel.Manager">
         <MappingFragment StoreEntitySet="Manager">
@@ -41,6 +52,16 @@
           <ScalarProperty Name="Surname" ColumnName="Surname" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="SignID" ColumnName="SignID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuWeek">
+      <EntityTypeMapping TypeName="ManagerDiningRoomModel.MenuWeek">
+        <MappingFragment StoreEntitySet="MenuWeek">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="WeekID" ColumnName="WeekID" />
+          <ScalarProperty Name="YesterdayDate" ColumnName="YesterdayDate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -78,9 +99,18 @@
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="ProductID" ColumnName="ProductID" />
           <ScalarProperty Name="WorkersID" ColumnName="WorkersID" />
-          <ScalarProperty Name="YesterdayDate" ColumnName="YesterdayDate" />
           <ScalarProperty Name="Count" ColumnName="Count" />
           <ScalarProperty Name="TotalSum" ColumnName="TotalSum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupplyWeek">
+      <EntityTypeMapping TypeName="ManagerDiningRoomModel.SupplyWeek">
+        <MappingFragment StoreEntitySet="SupplyWeek">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SupplyID" ColumnName="SupplyID" />
+          <ScalarProperty Name="WeekID" ColumnName="WeekID" />
+          <ScalarProperty Name="YesterdayDate" ColumnName="YesterdayDate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -95,9 +125,18 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="WeekCategory">
+      <EntityTypeMapping TypeName="ManagerDiningRoomModel.WeekCategory">
+        <MappingFragment StoreEntitySet="WeekCategory">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Workers">
       <EntityTypeMapping TypeName="ManagerDiningRoomModel.Workers">
         <MappingFragment StoreEntitySet="Workers">
+          <ScalarProperty Name="SignInID" ColumnName="SignInID" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Surname" ColumnName="Surname" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -112,7 +151,9 @@
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="DishID" ColumnName="DishID" />
           <ScalarProperty Name="CookID" ColumnName="CookID" />
+          <ScalarProperty Name="TotalSum" ColumnName="TotalSum" />
           <ScalarProperty Name="YesterdayDate" ColumnName="YesterdayDate" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

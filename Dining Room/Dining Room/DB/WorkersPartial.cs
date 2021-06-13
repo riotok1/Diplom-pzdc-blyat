@@ -15,5 +15,13 @@ namespace Dining_Room.DB
                 return Surname + " " + Name + " " + Patronymic + "; Должность - " + Post;
             }
         }
+
+        public string secondFullName
+        {
+            get
+            {
+                return Surname + " " + Name + " " + Patronymic;
+            }
+        }
     }
 }

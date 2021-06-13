@@ -73,6 +73,15 @@
                         </StackPanel>
                         <StackPanel Orientation="Horizontal"
                                     Margin="0,0,0,20">
+                            <TextBlock Text="Количество:"
+                                       FontSize="15"
+                                       Width="100"/>
+                            <TextBox x:Name="countTxb"
+                                     FontSize="15"
+                                     Width="200"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,20">
                             <TextBlock Text="Стоимость:"
                                        FontSize="15"
                                        Width="100"/>

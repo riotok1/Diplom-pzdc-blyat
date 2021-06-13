@@ -2,8 +2,11 @@
 FC:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\App.xaml;;
 FC:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\View\Pages\Admin\AdminMainPage.xaml;;
 FC:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\View\Pages\Admin\DishesRep\DishesMainPage.xaml;;
+FC:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\View\Pages\Admin\DishesRep\DishesSystemPate.xaml;;
 FC:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\View\Pages\Admin\DishesRep\FunctionsWithData\AddPage.xaml;;
 FC:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\View\Pages\Admin\DishesRep\FunctionsWithData\EditPage.xaml;;
+FC:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\View\Pages\Admin\DishesRep\FunctionsWithData\YesterdayMenuPage.xaml;;
+FC:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\View\Pages\Admin\DishesRep\YesterdayMenuViewPage.xaml;;
 FC:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\View\Pages\Admin\ProductsRep\DeliveryMainPage.xaml;;
 FC:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\View\Pages\Admin\ProductsRep\FunctionsWithData\AddProductPage.xaml;;
 FC:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\View\Pages\Admin\ProductsRep\Market\MarketAddPage.xaml;;
@@ -14,6 +17,5 @@ FC:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\View\Pages\Admin\Wo
 FC:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\View\Pages\Admin\WorkersRep\FunctionsWithData\EditWorkersPage.xaml;;
 FC:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\View\Pages\Admin\WorkersRep\StaffMainPage.xaml;;
 FC:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\View\Pages\AutorizationPage.xaml;;
-FC:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\View\Pages\User\UserMainPage.xaml;;
 FC:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\View\Windows\MainWindow.xaml;;
 

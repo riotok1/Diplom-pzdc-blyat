@@ -49,7 +49,7 @@ namespace Dining_Room.View.Pages.Admin
         //Переход на страницу блюд
         private void dishesBtn_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new DishesMainPage());
+            NavigationService.Navigate(new DishesSystemPate());
         }
 
         //Переход на страницу принятых продуктов

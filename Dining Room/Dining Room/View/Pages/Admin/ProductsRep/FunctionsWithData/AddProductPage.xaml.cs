@@ -38,6 +38,8 @@ namespace Dining_Room.View.Pages.Admin.ProductsRep.FunctionsWithData
 
             productCmb.ItemsSource = ConnectClass.db.Products.ToList();
             productCmb.DisplayMemberPath = "fullProduct";
+
+            weekDayCmb.ItemsSource = ConnectClass.db.WeekCategory.Select(item => item.Day).ToList();
         }
 
         private void backBtn_Click(object sender, RoutedEventArgs e)
@@ -99,7 +101,6 @@ namespace Dining_Room.View.Pages.Admin.ProductsRep.FunctionsWithData
 
                 newSupply.WorkersID = _idClient;
                 newSupply.ProductID = _idProduct;
-                newSupply.YesterdayDate = DateTime.Now;
                 newSupply.TotalSum = _total;
                 newSupply.Count = _count;
                 ConnectClass.db.Supply.Add(newSupply);
@@ -138,6 +139,17 @@ namespace Dining_Room.View.Pages.Admin.ProductsRep.FunctionsWithData
         private void BasketView()
         {
             dataView.ItemsSource = ConnectClass.db.Basket.Where(item => item.WorkersID == _idClient).ToList();
+        }
+
+        private void removeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedRemove = dataView.SelectedItem as Basket;
+            if (selectedRemove != null)
+            {
+                ConnectClass.db.Basket.Remove(selectedRemove);
+                ConnectClass.db.SaveChanges();
+                BasketView();
+            }
         }
     }
 }

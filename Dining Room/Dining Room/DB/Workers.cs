@@ -18,6 +18,7 @@ namespace Dining_Room.DB
         public Workers()
         {
             this.Basket = new HashSet<Basket>();
+            this.DishBacket = new HashSet<DishBacket>();
             this.Supply = new HashSet<Supply>();
             this.YesterdayMenu = new HashSet<YesterdayMenu>();
         }
@@ -27,12 +28,16 @@ namespace Dining_Room.DB
         public string Name { get; set; }
         public string Patronymic { get; set; }
         public string Post { get; set; }
+        public Nullable<int> SignInID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Basket> Basket { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DishBacket> DishBacket { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Supply> Supply { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<YesterdayMenu> YesterdayMenu { get; set; }
+        public virtual SignIn SignIn { get; set; }
     }
 }

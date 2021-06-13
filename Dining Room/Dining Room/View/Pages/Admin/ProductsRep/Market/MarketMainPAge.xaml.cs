@@ -72,10 +72,14 @@ namespace Dining_Room.View.Pages.Admin.ProductsRep.Market
                         Page_Loaded(null, null);
                     }
                 }
+                else
+                {
+                    throw new Exception("Выберите элемент!");
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Выберите элемент!");
+                MessageBox.Show(ex.Source, ex.Message);
             }
         }
     }

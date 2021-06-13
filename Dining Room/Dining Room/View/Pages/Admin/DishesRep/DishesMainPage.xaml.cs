@@ -29,6 +29,37 @@ namespace Dining_Room.View.Pages.Admin.DishesRep
             InitializeComponent();
         }
 
+        private int _countNote = 20;
+
+        private void Root(string sort = "", string filter = "", string search = "")
+        {
+            var CollectionProduct = ConnectClass.db.Dish.ToList();
+            if (!string.IsNullOrEmpty(sort) && !string.IsNullOrWhiteSpace(sort))
+            {
+                if (sort == "По возрастанию цены")
+                    CollectionProduct = (CollectionProduct.OrderBy(item => item.Price).ToList());
+                else if (sort == "По убыванию цены")
+                    CollectionProduct = (CollectionProduct.OrderByDescending(item => item.Price).ToList());
+            }
+            if (!string.IsNullOrEmpty(filter) && !string.IsNullOrEmpty(filter))
+            {
+                // Отфильтровать
+                if (filter == "Горячее" || filter == "Холодное" || filter == "Напитки")
+                {
+                    CollectionProduct = CollectionProduct.Where(item => item.Category.Title == filter).ToList();
+                }
+                else
+                    listDataView.ItemsSource = CollectionProduct.ToList();
+            }
+            if (!string.IsNullOrEmpty(search) && !string.IsNullOrEmpty(search))
+            {
+                // Поиск
+                CollectionProduct = CollectionProduct.Where(item => item.NameOfDish.ToLower().Contains(search.ToLower())).ToList();
+            }
+
+            listDataView.ItemsSource = CollectionProduct;
+        }
+
         //Кнопка назад
         private void backBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -38,7 +69,7 @@ namespace Dining_Room.View.Pages.Admin.DishesRep
         //Инициализация данных
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            listDataView.ItemsSource = ConnectClass.db.Dish.ToList();
+            Root();
         }
 
         //Добавлениe
@@ -97,7 +128,7 @@ namespace Dining_Room.View.Pages.Admin.DishesRep
         //Поиск
         private void searchTxb_TextChanged(object sender, TextChangedEventArgs e)
         {
-            listDataView.ItemsSource = ConnectClass.db.Dish.Where(item => item.NameOfDish.Contains(searchTxb.Text) || item.Volume.Contains(searchTxb.Text)).ToList();
+            Root(SortComboBox.Text, dishCategoryCmb.Text, searchTxb.Text);
         }
 
         //Эксопрт в WORD
@@ -140,31 +171,14 @@ namespace Dining_Room.View.Pages.Admin.DishesRep
             }
         }
 
-        private void Update(string sortCategory = "", string search = "")
-        {
-            var dish = ConnectClass.db.Dish.ToList();
-            int all = ConnectClass.db.Dish.Count();
-
-            if (!string.IsNullOrEmpty(sortCategory) && !string.IsNullOrEmpty(sortCategory))
-            {
-                if (sortCategory == "Горячее")
-                    dish = dish.Where(item => item.Category.Title == "Горячее").ToList();
-                if (sortCategory == "Холодное")
-                    dish = dish.Where(item => item.Category.Title == "Холодное").ToList();
-            }
-            else
-            {
-                dish = dish.ToList();
-            }
-            if (!string.IsNullOrEmpty(search) && !string.IsNullOrEmpty(search))
-                dish = dish.Where(item => item.NameOfDish.ToLower().Contains(searchTxb.Text.ToLower()) || item.Volume.ToLower().Contains(searchTxb.Text.ToLower())).ToList();
-            countDishes.Text = $"{dish.Count} из {all}";
-            listDataView.ItemsSource = dish;
-        }
-
         private void dishCategoryCmb_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Update((dishCategoryCmb.SelectedItem as ComboBoxItem).Content.ToString(), searchTxb.Text);
+            Root(SortComboBox.Text, (dishCategoryCmb.SelectedItem as ComboBoxItem).Content.ToString(), searchTxb.Text);
+        }
+
+        private void SortComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Root((SortComboBox.SelectedItem as ComboBoxItem).Content.ToString(), dishCategoryCmb.Text, searchTxb.Text);
         }
     }
 }
