@@ -1,0 +1,73 @@
+﻿<Page x:Class="Dining_Room.View.Pages.Admin.ProductsRep.WarehousePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Dining_Room.View.Pages.Admin.ProductsRep"
+      mc:Ignorable="d" Loaded="Page_Loaded"
+      d:DesignHeight="800" d:DesignWidth="1200"
+      Title="WarehousePage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <ListView x:Name="listDataView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid Grid.Column="0"
+                                  Margin="0,0,20,0">
+                                <Image Source="{Binding Supply.Products.ProductImage}"
+                                       Width="200"
+                                       Height="150"/>
+                            </Grid>
+
+                            <Grid Grid.Column="1">
+                                <StackPanel VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            Orientation="Vertical">
+                                    <Label Content="{Binding Supply.Products.ProductName}" ContentStringFormat="Продукт: {0}" FontSize="14" FontWeight="Bold"/>
+                                    <Label Content="{Binding Supply.Products.Count}" ContentStringFormat="Продукт: {0}" FontSize="14" FontWeight="Bold"/>
+                                    <Label Content="{Binding Supply.Products.Price}" ContentStringFormat="Цена: {0}" FontSize="14"/>
+                                </StackPanel>
+                            </Grid>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Left"
+                        Margin="20">
+                <Button x:Name="backBtn"
+                        Content="Назад"
+                        Background="Black"
+                        BorderBrush="Black"
+                        Foreground="White"
+                        Width="120"
+                        Height="35" Click="backBtn_Click"/>
+            </StackPanel>
+            <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+                <Button x:Name="picBtn"
+                        Content="Печать"
+                        Background="Black"
+                        BorderBrush="Black"
+                        Foreground="White"
+                        Width="120"
+                        Height="35" Click="picBtn_Click"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

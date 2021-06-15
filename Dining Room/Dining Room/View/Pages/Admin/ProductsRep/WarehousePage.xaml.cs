@@ -1,4 +1,4 @@
-﻿using Dining_Room.View.Pages.Admin.ProductsRep.Market;
+﻿using Dining_Room.Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,11 +17,11 @@ using System.Windows.Shapes;
 namespace Dining_Room.View.Pages.Admin.ProductsRep
 {
     /// <summary>
-    /// Логика взаимодействия для ProductSystemPage.xaml
+    /// Логика взаимодействия для WarehousePage.xaml
     /// </summary>
-    public partial class ProductSystemPage : Page
+    public partial class WarehousePage : Page
     {
-        public ProductSystemPage()
+        public WarehousePage()
         {
             InitializeComponent();
         }
@@ -31,19 +31,14 @@ namespace Dining_Room.View.Pages.Admin.ProductsRep
             NavigationService.GoBack();
         }
 
-        private void productsBtn_Click(object sender, RoutedEventArgs e)
+        private void picBtn_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new MarketMainPAge());
+
         }
 
-        private void deliveryBtn_Click(object sender, RoutedEventArgs e)
+        private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new DeliveryMainPage());
-        }
-
-        private void warehouseBtn_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new WarehousePage());
+            listDataView.ItemsSource = ConnectClass.db.SupplyWeek.ToList();
         }
     }
 }

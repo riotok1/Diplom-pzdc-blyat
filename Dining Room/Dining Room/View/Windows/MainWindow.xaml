@@ -4,8 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dining_Room"
-        mc:Ignorable="d" Loaded="Window_Loaded"
-        Title="MainWindow" Height="800" Width="1200">
+        mc:Ignorable="d" Loaded="Window_Loaded" Icon="/Assests/diningIcon.png"
+        Title="Столовая Час-пик" Height="800" Width="1200">
     <Grid>
         <Frame x:Name="mainFram"
                NavigationUIVisibility="Hidden"/>

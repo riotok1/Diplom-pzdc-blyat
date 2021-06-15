@@ -190,3 +190,6 @@ C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Roo
 C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.csproj.CopyComplete
 C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.exe
 C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.pdb
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\Dining Room.csprojAssemblyReference.cache
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\WarehousePage.g.cs
+C:\Users\Reggie\Desktop\Dining Room\Dining Room\Dining Room\obj\Debug\View\Pages\Admin\ProductsRep\WarehousePage.baml

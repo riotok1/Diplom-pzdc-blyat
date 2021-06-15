@@ -32,7 +32,16 @@
                         BorderBrush="Black"
                         Foreground="White"
                         Width="300"
-                        Height="50" Click="deliveryBtn_Click"/>
+                        Height="50"
+                        Margin="0,0,0,10"
+                        Click="deliveryBtn_Click"/>
+                <Button x:Name="warehouseBtn"
+                        Content="Склад"
+                        Background="Black"
+                        BorderBrush="Black"
+                        Foreground="White"
+                        Width="300"
+                        Height="50" Click="warehouseBtn_Click"/>
             </StackPanel>
         </Grid>
 
