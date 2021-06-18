@@ -105,22 +105,22 @@ namespace Dining_Room.View.Pages.Admin.WorkersRep
                 var document = word.Documents.Add();
                 var paragrah = word.ActiveDocument.Paragraphs.Add();
                 var tableRange = paragrah.Range;
-                var workersList = ConnectClass.db.Workers.ToList();
-                var table = document.Tables.Add(tableRange, workersList.Count, 4);
+                var dishList = ConnectClass.db.Workers.ToList();
+                var table = document.Tables.Add(tableRange, dishList.Count, 4);
                 table.Borders.Enable = 1;
                 table.Cell(1, 1).Range.Text = "Фамилия";
                 table.Cell(1, 2).Range.Text = "Имя";
                 table.Cell(1, 3).Range.Text = "Отчество";
-                table.Cell(1, 5).Range.Text = "Должность";
+                table.Cell(1, 4).Range.Text = "Должность";
 
                 int i = 2;
-                foreach (var item in workersList)
+                foreach (var item in dishList)
                 {
                     table.Cell(i, 0).Range.Text = item.ID.ToString();
                     table.Cell(i, 1).Range.Text = item.Surname;
                     table.Cell(i, 2).Range.Text = item.Name;
                     table.Cell(i, 3).Range.Text = item.Patronymic;
-                    table.Cell(i, 5).Range.Text = item.Post;
+                    table.Cell(i, 4).Range.Text = item.Post;
                     i++;
                 }
                 document.SaveAs2(@"D:\workers.docx");

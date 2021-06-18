@@ -23,12 +23,6 @@
                            FontSize="16"
                            FontWeight="Bold"/>
             </StackPanel>
-            <StackPanel VerticalAlignment="Center"
-                        HorizontalAlignment="Center"
-                        Orientation="Horizontal">
-                <TextBlock x:Name="yesDate"/>
-                <TextBlock x:Name="yesDay"/>
-            </StackPanel>
         </Grid>
         
         <Grid Grid.Row="1">
@@ -43,7 +37,7 @@
 
                             <Grid Grid.Column="0"
                                       Margin="0,0,20,0">
-                                <Image Source="{Binding YesterdayMenu.Dish.DishImg}"
+                                <Image Source="{Binding Dish.DishImg}"
                                            Width="200"
                                            Height="200"/>
                             </Grid>
@@ -52,11 +46,11 @@
                                 <StackPanel VerticalAlignment="Center"
                                                 HorizontalAlignment="Center"
                                                 Orientation="Vertical">
-                                    <Label Content="{Binding YesterdayMenu.Dish.NameOfDish}" ContentStringFormat="Блюдо: {0}" FontSize="14" FontWeight="Bold"/>
-                                    <Label Content="{Binding YesterdayMenu.Dish.Category.Title}" ContentStringFormat="Категория: {0}" FontSize="14"/>
-                                    <Label Content="{Binding YesterdayMenu.Dish.Volume}" ContentStringFormat="Объем: {0}" FontSize="14"/>
-                                    <Label Content="{Binding YesterdayMenu.Dish.Count}" ContentStringFormat="Количество: {0} порций" FontSize="14"/>
-                                    <Label Content="{Binding YesterdayMenu.Dish.Price}" ContentStringFormat="Стоимость: {0} руб." FontSize="14"/>
+                                    <Label Content="{Binding Dish.NameOfDish}" ContentStringFormat="Блюдо: {0}" FontSize="14" FontWeight="Bold"/>
+                                    <Label Content="{Binding Dish.Category.Title}" ContentStringFormat="Категория: {0}" FontSize="14"/>
+                                    <Label Content="{Binding Dish.Volume}" ContentStringFormat="Объем: {0}" FontSize="14"/>
+                                    <Label Content="{Binding Count}" ContentStringFormat="Количество: {0} порций" FontSize="14"/>
+                                    <Label Content="{Binding Dish.Price}" ContentStringFormat="Стоимость: {0} руб." FontSize="14"/>
                                 </StackPanel>
                             </Grid>
                         </Grid>
@@ -67,14 +61,24 @@
 
         <Grid Grid.Row="2">
             <StackPanel VerticalAlignment="Center"
-                        HorizontalAlignment="Center">
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal">
                 <Button x:Name="backBtn"
                         Content="Назад"
                         Background="Black"
                         BorderBrush="Black"
                         Foreground="White"
                         Width="120"
-                        Height="35" Click="backBtn_Click"/>
+                        Height="35"
+                        Margin="0,0,20,0"
+                        Click="backBtn_Click"/>
+                <Button x:Name="wordBtn"
+                        Content="Печать"
+                        Background="Black"
+                        BorderBrush="Black"
+                        Foreground="White"
+                        Width="120"
+                        Height="35" Click="wordBtn_Click"/>
             </StackPanel>
         </Grid>
     </Grid>

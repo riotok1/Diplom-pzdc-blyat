@@ -14,21 +14,14 @@ namespace Dining_Room.DB
     
     public partial class Supply
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Supply()
-        {
-            this.SupplyWeek = new HashSet<SupplyWeek>();
-        }
-    
         public int ID { get; set; }
         public int ProductID { get; set; }
         public int WorkersID { get; set; }
         public int Count { get; set; }
         public double TotalSum { get; set; }
+        public Nullable<System.DateTime> YesterdayDate { get; set; }
     
         public virtual Products Products { get; set; }
         public virtual Workers Workers { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SupplyWeek> SupplyWeek { get; set; }
     }
 }

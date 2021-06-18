@@ -23,7 +23,7 @@ namespace Dining_Room.View.Pages.Admin.ProductsRep.FunctionsWithData
     public partial class AddProductPage : Page
     {
         private int _balance = 1;
-        private int _countJew { get; set; }
+        private int _countProducts { get; set; }
 
         private int _count = 1;
         private float _total { get; set; }
@@ -39,7 +39,6 @@ namespace Dining_Room.View.Pages.Admin.ProductsRep.FunctionsWithData
             productCmb.ItemsSource = ConnectClass.db.Products.ToList();
             productCmb.DisplayMemberPath = "fullProduct";
 
-            weekDayCmb.ItemsSource = ConnectClass.db.WeekCategory.Select(item => item.Day).ToList();
         }
 
         private void backBtn_Click(object sender, RoutedEventArgs e)
@@ -71,7 +70,7 @@ namespace Dining_Room.View.Pages.Admin.ProductsRep.FunctionsWithData
         {
             _count++;
             _total += _price;
-            _balance = _countJew - _count;
+            _balance = _countProducts - _count;
             totalSum.Text = _total.ToString();
             txbCount.Text = _count.ToString();
             
@@ -84,7 +83,7 @@ namespace Dining_Room.View.Pages.Admin.ProductsRep.FunctionsWithData
                 _count--;
                 _total -= _price;
             }
-            _balance = _countJew + _count;
+            _balance = _countProducts + _count;
             totalSum.Text = _total.ToString();
             txbCount.Text = _count.ToString();
         }
@@ -103,6 +102,7 @@ namespace Dining_Room.View.Pages.Admin.ProductsRep.FunctionsWithData
                 newSupply.ProductID = _idProduct;
                 newSupply.TotalSum = _total;
                 newSupply.Count = _count;
+                newSupply.YesterdayDate = DateTime.Now;
                 ConnectClass.db.Supply.Add(newSupply);
 
                 newBasket.WorkersID = _idClient;
@@ -125,7 +125,7 @@ namespace Dining_Room.View.Pages.Admin.ProductsRep.FunctionsWithData
             _total = (productCmb.SelectedItem as Products).Price;
             _price = _total;
             txbCount.Visibility = Visibility.Visible;
-            if (_countJew != 0)
+            if (_countProducts != 0)
             {
                 _count = 1;
                 txbCount.Text = _count.ToString();

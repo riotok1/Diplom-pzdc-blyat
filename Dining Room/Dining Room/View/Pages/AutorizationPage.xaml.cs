@@ -34,9 +34,7 @@ namespace Dining_Room.View.Pages
             try
             {
                 var currentUser = ConnectClass.db.Manager.FirstOrDefault(item => item.SignIn.LogIn == loginTxb.Text && item.SignIn.Password == passTxb.Password);
-                ;
                 var secondCurrentUser = ConnectClass.db.Workers.FirstOrDefault(item => item.SignIn.LogIn == loginTxb.Text && item.SignIn.Password == passTxb.Password);
-                ;
                 if(currentUser != null)
                 {
                     switch (currentUser.SignIn.RoleID)

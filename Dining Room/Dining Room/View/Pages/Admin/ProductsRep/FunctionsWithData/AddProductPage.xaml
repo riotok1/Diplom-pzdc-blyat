@@ -26,15 +26,6 @@
                             Orientation="Vertical">
                     <StackPanel Orientation="Horizontal"
                                 Margin="0,0,0,20">
-                        <TextBlock Text="Выберите день:"
-                                   FontSize="15"
-                                   Width="190"/>
-                        <ComboBox x:Name="weekDayCmb"
-                                 FontSize="15"
-                                 Width="200"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal"
-                                Margin="0,0,0,20">
                         <TextBlock Text="Прикрепить сотрудника:"
                                    FontSize="15"
                                    Width="190"/>
@@ -59,10 +50,12 @@
                         <Button Content="+"
                                 Click="btnAddCount_Click"
                                 Foreground="White"
+                                BorderBrush="Black"
                                 Background="Black"
                                 Margin="0,0,5,0"/>
                         <Button Content="-"
                                 Foreground="White"
+                                BorderBrush="Black"
                                 Background="Black"
                                 Click="btnRemoveCount_Click"/>
                     </StackPanel>
@@ -100,8 +93,8 @@
                               IsReadOnly="True">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Сотрудник" Width="*" Binding="{Binding Workers.secondFullName}"/>
-                            <DataGridTextColumn Header="Дата поставки" Width="*" Binding="{Binding YesterdayDate}"/>
                             <DataGridTextColumn Header="Продукт" Width="*" Binding="{Binding Products.ProductName}"/>
+                            <DataGridTextColumn Header="Стоимость" Width="*" Binding="{Binding Products.Price}"/>
                             <DataGridTextColumn Header="Количество" Width="0.7 *" Binding="{Binding Count}"/>
                             <DataGridTextColumn Header="Сумма" Width="0.6*" Binding="{Binding TotalSum}"/>
                         </DataGrid.Columns>

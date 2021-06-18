@@ -26,15 +26,6 @@
                             Orientation="Vertical">
                     <StackPanel Orientation="Horizontal"
                                 Margin="0,0,0,20">
-                        <TextBlock Text="Выберите день:"
-                                   FontSize="15"
-                                   Width="190"/>
-                        <ComboBox x:Name="weekDayCmb"
-                                 FontSize="15"
-                                 Width="200"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal"
-                                Margin="0,0,0,20">
                         <TextBlock Text="Прикрепить сотрудника:"
                                    FontSize="15"
                                    Width="190"/>
@@ -59,11 +50,13 @@
                         <Button Content="+"
                                 Click="btnAddCount_Click"
                                 Foreground="White"
+                                BorderBrush="Black"
                                 Background="Black"
                                 Margin="0,0,5,0"/>
                         <Button Content="-"
                                 Foreground="White"
                                 Background="Black"
+                                BorderBrush="Black"
                                 Click="btnRemoveCount_Click"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal"
@@ -102,6 +95,7 @@
                             <DataGridTextColumn Header="Сотрудник" Width="*" Binding="{Binding Workers.fullName}"/>
                             <DataGridTextColumn Header="Блюдо" Width="*" Binding="{Binding Dish.NameOfDish}"/>
                             <DataGridTextColumn Header="Стоимость" Width="*" Binding="{Binding Dish.Price}"/>
+                            <DataGridTextColumn Header="Количество" Width="*" Binding="{Binding Count}"/>
                             <DataGridTextColumn Header="Общая сумма на выходе" Width="*" Binding="{Binding TotalSum}"/>
                         </DataGrid.Columns>
                     </DataGrid>

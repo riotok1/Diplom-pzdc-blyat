@@ -138,7 +138,7 @@
                             HorizontalAlignment="Right"
                             Margin="20">
                     <Button x:Name="wordBtn"
-                            Content="WORD"
+                            Content="Печать"
                             Background="Black"
                             BorderBrush="Black"
                             Foreground="White"

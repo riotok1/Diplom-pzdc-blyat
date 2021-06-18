@@ -14,12 +14,6 @@ namespace Dining_Room.DB
     
     public partial class YesterdayMenu
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public YesterdayMenu()
-        {
-            this.MenuWeek = new HashSet<MenuWeek>();
-        }
-    
         public int ID { get; set; }
         public int DishID { get; set; }
         public int CookID { get; set; }
@@ -28,8 +22,6 @@ namespace Dining_Room.DB
         public int Count { get; set; }
     
         public virtual Dish Dish { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<MenuWeek> MenuWeek { get; set; }
         public virtual Workers Workers { get; set; }
     }
 }

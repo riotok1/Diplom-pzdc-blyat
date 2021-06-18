@@ -20,12 +20,21 @@
                 <StackPanel VerticalAlignment="Center"
                             HorizontalAlignment="Center"
                             Orientation="Horizontal">
-                    <TextBlock Text="Поиск:"
+                    <TextBlock Text="Выберите дату поставки:"
                                FontSize="15"
-                               Width="70"/>
-                    <TextBox x:Name="searchTxb"
-                             FontSize="15"
-                             Width="200" TextChanged="searchTxb_TextChanged"/>
+                               Width="200"/>
+                    <DatePicker x:Name="dateCmb"
+                                FontSize="15"
+                                Width="200" 
+                                SelectedDateChanged="dateCmb_SelectedDateChanged"
+                                Margin="0,0,20,0"/>
+                    <Button x:Name="cleanBtn"
+                            Content="Очистить"
+                            Background="Black"
+                            BorderBrush="Black"
+                            Foreground="White"
+                            Width="120"
+                            Height="35" Click="cleanBtn_Click"/>
                 </StackPanel>
             </Grid>
 
@@ -34,12 +43,28 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <Grid>
-                                <StackPanel VerticalAlignment="Center"
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid Grid.Column="0"
+                                  Margin="0,0,20,0">
+                                    <Image Source="{Binding Products.ProductImage}"
+                                       Width="200"
+                                       Height="150"/>
+                                </Grid>
+
+                                <Grid Grid.Column="1">
+                                    <StackPanel VerticalAlignment="Center"
                                             HorizontalAlignment="Center"
                                             Orientation="Vertical">
-                                    <Label Content="{Binding Workers.fullName}" ContentStringFormat="Сотдруник:"/>
-                                    <Label Content="{Binding YesterdayDate}" ContentStringFormat="Дата принятия: {0:dd.MM.yy}"/>
-                                </StackPanel>
+                                        <Label Content="{Binding Products.ProductName}" ContentStringFormat="Продукт: {0}" FontSize="14" FontWeight="Bold"/>
+                                        <Label Content="{Binding Products.Price}" ContentStringFormat="Цена: {0} руб." FontSize="14"/>
+                                        <Label Content="{Binding Count}" ContentStringFormat="Количество: {0} кг." FontSize="14"/>
+                                        <Label Content="{Binding TotalSum}" ContentStringFormat="Сумма: {0} руб." FontSize="14"/>
+                                    </StackPanel>
+                                </Grid>
                             </Grid>
                         </DataTemplate>
                     </ListView.ItemTemplate>
@@ -69,13 +94,13 @@
                             Foreground="White"
                             Width="170"
                             Height="35"
-                            Margin="0,0,20,0" Click="addBtn_Click" />
+                            Click="addBtn_Click" />
                 </StackPanel>
                 <StackPanel VerticalAlignment="Center"
                             HorizontalAlignment="Right"
                             Margin="20">
                     <Button x:Name="wordBtn"
-                            Content="WORD"
+                            Content="Печать"
                             Background="Black"
                             BorderBrush="Black"
                             Foreground="White"

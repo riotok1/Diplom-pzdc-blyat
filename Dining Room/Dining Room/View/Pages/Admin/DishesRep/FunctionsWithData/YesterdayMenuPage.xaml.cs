@@ -23,7 +23,7 @@ namespace Dining_Room.View.Pages.Admin.DishesRep.FunctionsWithData
     public partial class YesterdayMenuPage : Page
     {
         private int _balance = 1;
-        private int _countJew { get; set; }
+        private int _countDish { get; set; }
 
         private int _count = 1;
         private float _total { get; set; }
@@ -40,7 +40,6 @@ namespace Dining_Room.View.Pages.Admin.DishesRep.FunctionsWithData
             staffCmb.ItemsSource = ConnectClass.db.Workers.ToList();
             staffCmb.DisplayMemberPath = "fullName";
 
-            weekDayCmb.ItemsSource = ConnectClass.db.WeekCategory.Select(item => item.Day).ToList();
         }
 
         private void backBtn_Click(object sender, RoutedEventArgs e)
@@ -114,11 +113,11 @@ namespace Dining_Room.View.Pages.Admin.DishesRep.FunctionsWithData
 
         private void dishCmb_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            _countJew = (dishCmb.SelectedItem as Dish).Count;
+            _countDish = (dishCmb.SelectedItem as Dish).Count;
             _total = (dishCmb.SelectedItem as Dish).Price;
             _price = _total;
             txbCount.Visibility = Visibility.Visible;
-            if (_countJew != 0)
+            if (_countDish != 0)
             {
                 _count = 1;
                 txbCount.Text = _count.ToString();
@@ -126,7 +125,7 @@ namespace Dining_Room.View.Pages.Admin.DishesRep.FunctionsWithData
             }
             else
             {
-                MessageBox.Show("Данного товара нет в наличии.", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                MessageBox.Show("Данного блюда нет в наличии.", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
                 txbCount.Text = "0";
                 totalSum.Text = "0";
             }
@@ -145,16 +144,16 @@ namespace Dining_Room.View.Pages.Admin.DishesRep.FunctionsWithData
         private void btnAddCount_Click(object sender, RoutedEventArgs e)
         {
             txbCount.Visibility = Visibility.Visible;
-            if (_countJew != 0)
+            if (_countDish != 0)
             {
-                if (_countJew == _count)
+                if (_countDish == _count)
                 {
-                    MessageBox.Show("Вы первысили количество товара, которое имеется в наличии склада.", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                    MessageBox.Show("Данного блюда не осталось на кухне", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
                 }
                 else
                 {
                     _count++;
-                    _balance = _countJew - _count;
+                    _balance = _countDish - _count;
                     _total += _price;
 
                 }
@@ -163,7 +162,7 @@ namespace Dining_Room.View.Pages.Admin.DishesRep.FunctionsWithData
             }
             else
             {
-                MessageBox.Show("Вы первысили количество товара, которое имеется в наличии склада.", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                MessageBox.Show("Данного блюда не осталось на кухне", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
             }
         }
 
@@ -174,7 +173,7 @@ namespace Dining_Room.View.Pages.Admin.DishesRep.FunctionsWithData
                 _count--;
                 _total -= _price;
             }
-            _balance = _countJew + _count;
+            _balance = _countDish + _count;
             totalSum.Text = _total.ToString();
             txbCount.Text = _count.ToString();
         }

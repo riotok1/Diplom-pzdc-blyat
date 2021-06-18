@@ -24,6 +24,7 @@ namespace Dining_Room.DB
         public int ID { get; set; }
         public byte[] ProductImage { get; set; }
         public string ProductName { get; set; }
+        public Nullable<int> Count { get; set; }
         public long Price { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

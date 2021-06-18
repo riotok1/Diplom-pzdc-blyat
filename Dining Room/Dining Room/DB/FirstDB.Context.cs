@@ -30,14 +30,11 @@ namespace Dining_Room.DB
         public virtual DbSet<Dish> Dish { get; set; }
         public virtual DbSet<DishBacket> DishBacket { get; set; }
         public virtual DbSet<Manager> Manager { get; set; }
-        public virtual DbSet<MenuWeek> MenuWeek { get; set; }
         public virtual DbSet<Products> Products { get; set; }
         public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<SignIn> SignIn { get; set; }
         public virtual DbSet<Supply> Supply { get; set; }
-        public virtual DbSet<SupplyWeek> SupplyWeek { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<WeekCategory> WeekCategory { get; set; }
         public virtual DbSet<Workers> Workers { get; set; }
         public virtual DbSet<YesterdayMenu> YesterdayMenu { get; set; }
     }

@@ -4,22 +4,19 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2487a237cb8a47b294a5049bd8f06b9f" Name="Diagram1">
-        <EntityTypeShape EntityType="ManagerDiningRoomModel.Basket" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManagerDiningRoomModel.Category" Width="1.5" PointX="1.5" PointY="16.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManagerDiningRoomModel.Dish" Width="1.5" PointX="3.75" PointY="16.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManagerDiningRoomModel.DishBacket" Width="1.5" PointX="6" PointY="7.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManagerDiningRoomModel.Manager" Width="1.5" PointX="12.25" PointY="2" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManagerDiningRoomModel.MenuWeek" Width="1.5" PointX="5.25" PointY="11.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManagerDiningRoomModel.Products" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManagerDiningRoomModel.Role" Width="1.5" PointX="7.75" PointY="2.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManagerDiningRoomModel.SignIn" Width="1.5" PointX="10" PointY="1.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManagerDiningRoomModel.Supply" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManagerDiningRoomModel.SupplyWeek" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManagerDiningRoomModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManagerDiningRoomModel.WeekCategory" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManagerDiningRoomModel.Workers" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManagerDiningRoomModel.YesterdayMenu" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
+      <Diagram DiagramId="ffbd1175a1064685b43fa34765d55d75" Name="Diagram1">
+        <EntityTypeShape EntityType="ManagerDiningRoomModel.Basket" Width="1.5" PointX="7.5" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerDiningRoomModel.Category" Width="1.5" PointX="6" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerDiningRoomModel.Dish" Width="1.5" PointX="8.25" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerDiningRoomModel.DishBacket" Width="1.5" PointX="10.5" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerDiningRoomModel.Manager" Width="1.5" PointX="5.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerDiningRoomModel.Products" Width="1.5" PointX="5.25" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerDiningRoomModel.Role" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerDiningRoomModel.SignIn" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerDiningRoomModel.Supply" Width="1.5" PointX="7.5" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerDiningRoomModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerDiningRoomModel.Workers" Width="1.5" PointX="5.25" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagerDiningRoomModel.YesterdayMenu" Width="1.5" PointX="7.5" PointY="13.125" IsExpanded="true" />
         <AssociationConnector Association="ManagerDiningRoomModel.FK_Basket_Products" ManuallyRouted="false" />
         <AssociationConnector Association="ManagerDiningRoomModel.FK_Basket_Workers" ManuallyRouted="false" />
         <AssociationConnector Association="ManagerDiningRoomModel.FK_Dish_CategoryID_Category_ID" ManuallyRouted="false" />
@@ -27,15 +24,11 @@
         <AssociationConnector Association="ManagerDiningRoomModel.FK_YesterdayMenu_Dish" ManuallyRouted="false" />
         <AssociationConnector Association="ManagerDiningRoomModel.FK_DishBacket_Workers" ManuallyRouted="false" />
         <AssociationConnector Association="ManagerDiningRoomModel.FK_Manager_SignID_SignIn_ID" ManuallyRouted="false" />
-        <AssociationConnector Association="ManagerDiningRoomModel.FK_MenuWeek_WeekCategory" ManuallyRouted="false" />
-        <AssociationConnector Association="ManagerDiningRoomModel.FK_MenuWeek_YesterdayMenu" ManuallyRouted="false" />
         <AssociationConnector Association="ManagerDiningRoomModel.FK_Supply_Products" ManuallyRouted="false" />
         <AssociationConnector Association="ManagerDiningRoomModel.FK_SignIn_RoleID_Role_IDRole" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagerDiningRoomModel.FK_Workers_SignIn" ManuallyRouted="false" />
         <AssociationConnector Association="ManagerDiningRoomModel.FK_Supply_Workers" ManuallyRouted="false" />
-        <AssociationConnector Association="ManagerDiningRoomModel.FK_SupplyWeek_Supply" ManuallyRouted="false" />
-        <AssociationConnector Association="ManagerDiningRoomModel.FK_SupplyWeek_WeekCategory" ManuallyRouted="false" />
         <AssociationConnector Association="ManagerDiningRoomModel.FK_YesterdayMenu_Workers" ManuallyRouted="false" />
-        <AssociationConnector Association="ManagerDiningRoomModel.FK_Workers_SignIn" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
